@@ -5,7 +5,7 @@ import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font/mono";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     follow: true,
     index: true,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#171717" },
+    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
+  ],
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
