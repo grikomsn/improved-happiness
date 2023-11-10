@@ -21,10 +21,10 @@ const nextConfig = {
   reactStrictMode: true,
   redirects: async () => [
     { source: "/contact", destination: "/", permanent: false },
+    { source: "/social.png", destination: "/api/opengraph/article", permanent: false },
     //
   ],
   rewrites: async () => [
-    { source: "/social.png", destination: "/api/opengraph/article" },
     //
   ],
   swcMinify: true,
