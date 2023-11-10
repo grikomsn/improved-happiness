@@ -7,9 +7,11 @@ import { homeSchema } from "./schema/home";
 import { projectSchema } from "./schema/projects";
 import { defaultMetadata } from "./site.config";
 
+const isVercelProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
+
 /** @see https://keystatic.com/docs/configuration */
 export default config({
-  storage: process.env.NEXT_PUBLIC_VERCEL_ENV
+  storage: isVercelProd
     ? {
         kind: "github",
         repo: {
