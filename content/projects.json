@@ -1,0 +1,110 @@
+{
+  "entries": [
+    {
+      "iconUrl": "/assets/projects/entries/0/iconUrl.png",
+      "name": "SurabayaJS",
+      "description": "User group based in Surabaya, Indonesia discussing everything JavaScript",
+      "subtitle": "Web Development, Former OSS Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://surabayajs.org"
+        }
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/1/iconUrl.png",
+      "name": "Deno Land Indonesia",
+      "description": "Deno user group from and for Indonesia",
+      "subtitle": "Web Development, Former OSS Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://github.com/denoland-id",
+          "label": "github.com/denoland-id"
+        }
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/2/iconUrl.png",
+      "name": "Recompose (formerly Composer)",
+      "description": "Manage your authz and feegrants without hassle",
+      "subtitle": "Web Development, UI/UX Design, R&D",
+      "link": {
+        "discriminant": false
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/3/iconUrl.png",
+      "name": "ibc.fun",
+      "description": "Interchain transfers and swaps on any Cosmos chain",
+      "subtitle": "Web Development, Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://ibc.fun"
+        }
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/4/iconUrl.png",
+      "name": "Juno Tools",
+      "description": "Smart contract dashboard for Juno Network",
+      "subtitle": "Web Development, UI/UX Design, R&D",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://juno.tools"
+        }
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/5/iconUrl.png",
+      "name": "Hyperspace",
+      "description": "Decentralized browser-based blockchain",
+      "subtitle": "Web Development",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://hyperspace.foundation"
+        }
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/6/iconUrl.png",
+      "name": "chakra-icons",
+      "description": "Transform SVGs to React Chakra UI <Icon />",
+      "subtitle": "OSS Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://github.com/kodingdotninja/chakra-icons",
+          "label": "github.com/kodingdotninja/chakra-icons"
+        }
+      }
+    },
+    {
+      "name": "Grayed Hacker News",
+      "description": "Arc Boost for a minimal dark or light themed Hacker News",
+      "subtitle": "Creator",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://arc.net/boost/1C201CD2-0BC6-431A-9CAE-4FFAFF506297"
+        }
+      }
+    },
+    {
+      "name": "Style Guide",
+      "description": "ESLint and Prettier style guide for various personal projects",
+      "subtitle": "Creator, Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://github.com/grikomsn/style-guide",
+          "label": "github.com/grikomsn/style-guide"
+        }
+      }
+    }
+  ]
+}
