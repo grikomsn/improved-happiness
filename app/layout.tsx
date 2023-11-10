@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     type: "website",
     siteName: defaultMetadata.title,
     images: [`${defaultMetadata.url}/social.png`],
+    url: defaultMetadata.url,
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
