@@ -5,7 +5,10 @@ declare namespace NodeJS {
     readonly KEYSTATIC_GITHUB_CLIENT_ID?: string;
     readonly KEYSTATIC_GITHUB_CLIENT_SECRET?: string;
     readonly KEYSTATIC_SECRET?: string;
+    readonly REDIRECT_EDGE_CONFIG?: string;
+
     readonly NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?: string;
+    readonly NEXT_PUBLIC_REDIRECT_HOST?: string;
   }
 }
 
