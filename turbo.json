@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDotEnv": ["APP_URL"],
+  "pipeline": {
+    "build": {
+      "inputs": ["!.github/**"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "outputs": []
+    }
+  }
+}
