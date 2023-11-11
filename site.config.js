@@ -41,7 +41,7 @@ const customMetadata = {
   githubUrl: `https://github.com/${defaultMetadata.github.username}`,
   linkedInUrl: "https://linkedin.com/in/griko",
   mastodonUrl: "https://mastodon.social/@griko",
-  scheduleUrl: "https://cal.com/griko/schedule",
+  scheduleUrl: `${url}/schedule`,
   xUrl: `https://x.com/${defaultMetadata.x.creator}`,
 };
 
