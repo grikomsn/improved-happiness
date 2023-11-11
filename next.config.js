@@ -17,10 +17,19 @@ const nextConfig = {
   redirects: async () => {
     /** @type {import("next/dist/lib/load-custom-routes").Redirect[]} */
     const arr = [
-    { source: "/contact", destination: "/", permanent: false },
-    { source: "/social.png", destination: "/api/opengraph/article", permanent: false },
-    //
+      { source: "/contact", destination: "/", permanent: false },
+      { source: "/social.png", destination: "/api/opengraph/article", permanent: false },
+      //
     ];
+
+    if (process.env.NEXT_PUBLIC_REDIRECT_HOST) {
+      arr.push({
+        source: "/",
+        has: [{ type: "host", value: process.env.NEXT_PUBLIC_REDIRECT_HOST }],
+        destination: APP_URL,
+        permanent: false,
+      });
+    }
 
     return arr;
   },
