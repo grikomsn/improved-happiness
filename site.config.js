@@ -10,12 +10,15 @@ const domain =
 const protocol = domain.includes("localhost") || domain.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/) ? "http" : "https";
 
 /* #__PURE__ */
+const url = `${protocol}://${domain}`;
+
+/* #__PURE__ */
 const defaultMetadata = {
   title: "Griko Nibras",
   description: "Software engineer specialized in frontend development",
   email: "griko@nibras.co",
   domain,
-  url: `${protocol}://${domain}`,
+  url,
   bluesky: {
     actor: "did:plc:rue26duvigfk3zi5sselzwjc",
     handle: "griko.blue",
