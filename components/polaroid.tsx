@@ -30,7 +30,7 @@ export function Polaroid({ className, ...props }: Props) {
           src={imageCover}
           alt="cover"
           fill={false}
-          onLoadingComplete={(ref) => ref.setAttribute("data-loaded", "true")}
+          onLoad={(event) => event.currentTarget.setAttribute("data-loaded", "true")}
           className={cn(
             "aspect-square rounded object-contain object-center",
             "opacity-0 transition-opacity duration-1000 data-[loaded=true]:opacity-100",
