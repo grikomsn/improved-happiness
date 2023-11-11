@@ -14,11 +14,16 @@ const nextConfig = {
     APP_URL,
   },
   reactStrictMode: true,
-  redirects: async () => [
+  redirects: async () => {
+    /** @type {import("next/dist/lib/load-custom-routes").Redirect[]} */
+    const arr = [
     { source: "/contact", destination: "/", permanent: false },
     { source: "/social.png", destination: "/api/opengraph/article", permanent: false },
     //
-  ],
+    ];
+
+    return arr;
+  },
   rewrites: async () => [
     //
   ],
