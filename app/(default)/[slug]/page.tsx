@@ -26,6 +26,14 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = await getCustomPage(params.slug).catch(() => notFound());
+  const search = getArticleLayoutSearchString(
+    {
+      title: page.title,
+      description: page.description,
+      path: `/${params.slug}`,
+    },
+    { encoded: true },
+  );
   return {
     title: page.title,
     description: page.description,
@@ -33,13 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: page.title,
       description: page.description,
       url: `${defaultMetadata.url}/${params.slug}`,
-      images: [
-        `${defaultMetadata.url}/api/opengraph/article?${getArticleLayoutSearchString({
-          title: page.title,
-          description: page.description,
-          path: `/${params.slug}`,
-        })}`,
-      ],
+      images: [`${defaultMetadata.url}/api/opengraph/article?${search}`],
     },
     authors: [
       {
