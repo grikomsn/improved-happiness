@@ -1,6 +1,7 @@
 import { ContainerSection } from "@/components/container-section";
 import { getArticleRenderers } from "@/components/keystatic/article-renderers";
 import { ProseArticle } from "@/components/prose-article";
+import { getArticleLayoutSearchString } from "@/components/satori/types";
 import { Signature } from "@/components/signature";
 import { TopScroller } from "@/components/top-scroller";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -28,15 +29,23 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const articles = await getArticle(params.slug).catch(() => notFound());
-  if (articles.redirect.discriminant) redirect(articles.redirect.value.url);
+  const article = await getArticle(params.slug).catch(() => notFound());
+  if (article.redirect.discriminant) redirect(article.redirect.value.url);
   return {
-    title: articles.title,
-    description: articles.description,
+    title: article.title,
+    description: article.description,
     openGraph: {
-      title: articles.title,
-      description: articles.description,
+      title: article.title,
+      description: article.description,
       url: `${defaultMetadata.url}/articles/${params.slug}`,
+      images: [
+        `${defaultMetadata.url}/api/opengraph/article?${getArticleLayoutSearchString({
+          title: article.title,
+          description: article.description,
+          imgSrc: article.cover || undefined,
+          path: `/articles/${params.slug}`,
+        })}`,
+      ],
     },
     authors: [
       {
