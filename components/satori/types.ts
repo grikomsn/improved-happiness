@@ -34,7 +34,7 @@ export function getArticleLayoutSearchParams(usp: URLSearchParams): ArticleLayou
 export function getArticleLayoutSearchString(props: ArticleLayoutProps, { encoded = false } = {}): string {
   const { title, description, imgSrc = "", path = "" } = props;
   if (encoded) {
-    return Buffer.from(JSON.stringify({ title, description, imgSrc, path })).toString("base64");
+    return `encoded=${Buffer.from(JSON.stringify({ title, description, imgSrc, path })).toString("base64")}`;
   }
   return toSearchString({ title, description, imgSrc, path });
 }
