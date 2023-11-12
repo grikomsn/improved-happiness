@@ -1,0 +1,26 @@
+---
+cover: /assets/articles/keystatic-the-last-framework-hop/cover.jpg
+title: 'Keystatic: The Last Framework Hop'
+description: >-
+  Latest iteration of this website is using Keystatic for its content management
+  system
+publishedAt: '2023-11-13'
+draft: false
+redirect:
+  discriminant: false
+---
+I have been doing some CMS framework hopping for countless times* and I decided to use Keystatic for my latest iteration of my personal website at [https://nibras.co](https://nibras.co). Tech stack is the usual [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), [some various libs](https://github.com/grikomsn/improved-happiness/blob/main/package.json), and (obviously) [Keystatic](https://keystatic.com/).
+
+Initially I wanted to use Next.js with the regular [`pages` router](https://nextjs.org/docs/pages) (here lies old man yells at cloud moment), but when I was in the middle of building the articles page I realized that the [Reader API](https://keystatic.com/docs/reader-api) suits better if using the [`app` router](https://nextjs.org/docs/app) instead. Even the Keystatic docs recommends Next.js with the `app` router patterns rather than `pages`. If I ended up using `pages` router, getting the articles requires me to use getStaticProps then passing props and types and such. With the `app` router, it is just an `await getArticles()` away and map the array as needed. 10 points for DX.
+
+Another thing I like is Keystatic's [WYSISYG content editor](https://keystatic.com/docs/fields/document) and [`DocumentRenderer`](https://docsmill.dev/npm/@keystatic/core@0.2.1#/renderer.DocumentRenderer) where I don't need to think much about (de)serializing contents for rendering on pages, and bonus points for allowing [custom renderers](https://github.com/Thinkmill/keystatic/blob/7ffd00ba450cf487f36365f1deb74d7790dfb8fd/docs/src/components/document-renderer.tsx#L39) so I can customize what and how components are shown. One great example is me [overriding the block code component](https://github.com/grikomsn/improved-happiness/blob/0adb1fd7797032befcfd88d2d226237ace1f17fa/components/keystatic/article-renderers.tsx#L10-L27) with my own server component using [`shikiji`](https://github.com/antfu/shikiji). Would be great if the custom renderer types allow async/server components, but this should suffice.
+
+And on top of that, with Keystatic's [local mode](https://keystatic.com/docs/local-mode) and [GitHub mode](https://keystatic.com/docs/github-mode), I can author my content easily with the same interface and experience for both offline and online. This is the main reason why I picked Keystatic for my CMS since I am not fully vendor locked cause my content lives in the repository and not somewhere in the cloud**. Not that I want to framework hop again but it definitely feels good to know I don't need to do another serialize/de-serialize excersize when I migrate to another provider. Again, not that I need to.
+
+All in all, Keystatic's dope and looking forward to use it for other projects. The source code is available publicly under the [MIT license](https://github.com/grikomsn/improved-happiness/blob/main/LICENSE) at [https://github.com/grikomsn/improved-happiness](https://github.com/grikomsn/improved-happiness).
+
+---
+
+\*) Contentful, DatoCMS, Sanity, Notion, Contentlayer, even custom made ones
+
+\**) Technically it's still in the cloud, but you know what I mean. Also, [Keystatic offers a cloud version](https://keystatic.com/docs/cloud) which I might try out.
