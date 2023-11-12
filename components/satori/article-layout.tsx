@@ -5,7 +5,7 @@ import { defaultMetadata } from "@/site.config";
 import { clsx } from "clsx";
 import { ArticleLayoutProps } from "./types";
 
-export function ArticleLayout({ title, description, imgSrc = "", path = "" }: ArticleLayoutProps) {
+export function ArticleLayout({ title, description, imgSrc = "", path = defaultMetadata.url }: ArticleLayoutProps) {
   if (imgSrc.startsWith("/assets/")) {
     imgSrc = defaultMetadata.url + imgSrc;
   }
