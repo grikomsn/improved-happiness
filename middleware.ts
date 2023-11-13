@@ -5,9 +5,9 @@ import { ignoreAssert, ignoreNullable, ignoreSymbol } from "./utils/assert";
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico))",
-    "/((?!about|articles|projects|keystatic))",
-    "/([a-zA-Z0-9]+)",
+    // "/((?!api|_next/static|_next/image|favicon.ico))",
+    // "/((?!about|articles|projects|keystatic))",
+    // "/([a-zA-Z0-9]+)",
   ],
 };
 
