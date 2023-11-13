@@ -50,7 +50,8 @@ export default async function Page() {
                 <AdaptiveLink
                   href={entry.redirect.value?.url || `/articles/${slug}`}
                   className={cn(
-                    "flex items-center gap-x-2 text-amber-600 dark:text-amber-500",
+                    "flex items-center gap-x-2 hover:underline",
+                    "text-amber-600 dark:text-amber-500",
                     "before:absolute before:-inset-4",
                   )}
                 >
