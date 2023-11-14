@@ -59,24 +59,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const articles = await getArticle(params.slug).catch(() => notFound());
-  const document = await articles.content();
+  const article = await getArticle(params.slug).catch(() => notFound());
+  const document = await article.content();
   const renderers = getArticleRenderers();
   return (
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
     >
-      {articles.cover && (
+      {article.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={articles.cover}
+          src={article.cover}
           alt="article cover image"
           className="mb-8 aspect-video w-full max-w-screen-sm rounded bg-neutral-500 object-cover"
         />
       )}
       <div className="relative">
-        <h1 className="max-w-screen-sm text-4xl font-bold">{articles.title}</h1>
+        <h1 className="max-w-screen-sm text-4xl font-bold">{article.title}</h1>
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
@@ -99,13 +99,13 @@ export default async function Page({ params }: Props) {
           </TooltipContent>
         </Tooltip>
       </div>
-      <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{articles.description}</p>
+      <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{article.description}</p>
       <div className="flex items-center gap-x-2 text-sm text-neutral-700 dark:text-neutral-300">
         <CalendarIcon
           className="h-3 w-3"
           aria-hidden="true"
         />
-        <time dateTime={articles.publishedAt}>{formatLongDate(articles.publishedAt)}</time>
+        <time dateTime={article.publishedAt}>{formatLongDate(article.publishedAt)}</time>
         <div className="flex-grow" />
       </div>
       <br />
