@@ -9,6 +9,15 @@ export const customPageSchema = collection({
     contentField: "content",
   },
   schema: {
+    cover: fields.image({
+      label: "Cover",
+      description: "The cover image for the page",
+      directory: "public/assets/pages",
+      publicPath: "/assets/pages",
+      validation: {
+        isRequired: false,
+      },
+    }),
     title: fields.slug({
       name: {
         label: "Title",
