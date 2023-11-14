@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     {
       title: page.title,
       description: page.description,
+      imgSrc: page.cover || undefined,
       path: `/${params.slug}`,
     },
     { encoded: true },
@@ -58,6 +59,14 @@ export default async function Page({ params }: Props) {
   const renderers = getArticleRenderers();
   return (
     <ContainerSection className="relative space-y-4">
+      {page.cover && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={page.cover}
+          alt="article cover image"
+          className="mb-8 aspect-video w-full max-w-screen-sm rounded bg-neutral-500 object-cover"
+        />
+      )}
       <h1 className="max-w-screen-sm text-4xl font-bold">{page.title}</h1>
       <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{page.description}</p>
       <div className="flex items-center gap-x-2 text-sm text-neutral-700 dark:text-neutral-300">
