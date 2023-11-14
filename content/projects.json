@@ -105,6 +105,17 @@
           "label": "github.com/grikomsn/style-guide"
         }
       }
+    },
+    {
+      "name": "airtable-deno",
+      "description": "Unofficial Airtable client for Deno",
+      "subtitle": "Author, Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://github.com/grikomsn/airtable-deno"
+        }
+      }
     }
   ]
 }
