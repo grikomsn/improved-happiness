@@ -9,11 +9,11 @@ dependencies:
     specifier: ^5.0.18
     version: 5.0.18
   '@keystatic/core':
-    specifier: ^0.2.1
-    version: 0.2.1(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.2.2
+    version: 0.2.2(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
   '@keystatic/next':
     specifier: ^2.0.0
-    version: 2.0.0(@keystatic/core@0.2.1)(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
+    version: 2.0.0(@keystatic/core@0.2.2)(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
   '@radix-ui/react-dialog':
     specifier: ^1.0.5
     version: 1.0.5(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
@@ -78,8 +78,8 @@ dependencies:
     specifier: ^0.32.6
     version: 0.32.6
   shikiji:
-    specifier: ^0.6.12
-    version: 0.6.12
+    specifier: ^0.6.13
+    version: 0.6.13
   tailwind-merge:
     specifier: ^2.0.0
     version: 2.0.0
@@ -96,7 +96,7 @@ dependencies:
 devDependencies:
   '@ianvs/prettier-plugin-sort-imports':
     specifier: ^4.1.1
-    version: 4.1.1(prettier@3.0.3)
+    version: 4.1.1(prettier@3.1.0)
   '@types/node':
     specifier: ^20.9.0
     version: 20.9.0
@@ -110,11 +110,11 @@ devDependencies:
     specifier: ^14.0.2
     version: 14.0.2(eslint@8.53.0)(typescript@5.2.2)
   prettier:
-    specifier: ^3.0.3
-    version: 3.0.3
+    specifier: ^3.1.0
+    version: 3.1.0
   prettier-plugin-tailwindcss:
     specifier: ^0.5.7
-    version: 0.5.7(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.0.3)
+    version: 0.5.7(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.1.0)
   shadcn-ui:
     specifier: ^0.4.1
     version: 0.4.1(typescript@5.2.2)
@@ -578,10 +578,10 @@ packages:
     resolution: {integrity: sha512-w7H3FRSMZHQc6rugpAys6iUgG4weWvWmCSsvUU91/ueWhYqjyR0eHCj6F9/5G9Btp5IQTc4IUJXwE+NxSN+GLg==}
     dev: false
 
-  /@formatjs/ecma402-abstract@1.17.3:
-    resolution: {integrity: sha512-2Q4hmKQ6CM30mRG/YMdSBW8LXf32BfuOb1FZgG+uVWPC/SQMoiVFz5JaeOukt96v6TZ4ddE+bHCmd611PW38QA==}
+  /@formatjs/ecma402-abstract@1.18.0:
+    resolution: {integrity: sha512-PEVLoa3zBevWSCZzPIM/lvPCi8P5l4G+NXQMc/CjEiaCWgyHieUoo0nM7Bs0n/NbuQ6JpXEolivQ9pKSBHaDlA==}
     dependencies:
-      '@formatjs/intl-localematcher': 0.5.0
+      '@formatjs/intl-localematcher': 0.5.2
       tslib: 2.6.2
     dev: false
 
@@ -591,23 +591,23 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@formatjs/icu-messageformat-parser@2.7.1:
-    resolution: {integrity: sha512-ErnXyRdk8AlpGcKskKVYn23aAlWXhI1kt5ek2o3pJwVeMTcrosSESQ8baztdTtJjfQHlB4NBeocfRA5C6DKv2g==}
+  /@formatjs/icu-messageformat-parser@2.7.3:
+    resolution: {integrity: sha512-X/jy10V9S/vW+qlplqhMUxR8wErQ0mmIYSq4mrjpjDl9mbuGcCILcI1SUYkL5nlM4PJqpc0KOS0bFkkJNPxYRw==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.3
-      '@formatjs/icu-skeleton-parser': 1.6.3
+      '@formatjs/ecma402-abstract': 1.18.0
+      '@formatjs/icu-skeleton-parser': 1.7.0
       tslib: 2.6.2
     dev: false
 
-  /@formatjs/icu-skeleton-parser@1.6.3:
-    resolution: {integrity: sha512-Viggz4Pic7oC4uR8z2VroL8H9boiUTTB0TqEsiRb6DHZv7QEcg1BoVQZBkBdLmvxhBS7nwBNrTdbaiW8GOV58Q==}
+  /@formatjs/icu-skeleton-parser@1.7.0:
+    resolution: {integrity: sha512-Cfdo/fgbZzpN/jlN/ptQVe0lRHora+8ezrEeg2RfrNjyp+YStwBy7cqDY8k5/z2LzXg6O0AdzAV91XS0zIWv+A==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.3
+      '@formatjs/ecma402-abstract': 1.18.0
       tslib: 2.6.2
     dev: false
 
-  /@formatjs/intl-localematcher@0.5.0:
-    resolution: {integrity: sha512-K1Xpg/8oyfCMxisJQa/fILoeoeyndcM0wcN8QiNG/uM5OAe1BcO1+2yd0gIboDI2tRJEsUi/sSBEYPbgkIdq4A==}
+  /@formatjs/intl-localematcher@0.5.2:
+    resolution: {integrity: sha512-txaaE2fiBMagLrR4jYhxzFO6wEdEG4TPMqrzBAcbr4HFUYzH/YC+lg6OIzKCHm8WgDdyQevxbAAV1OgcXctuGw==}
     dependencies:
       tslib: 2.6.2
     dev: false
@@ -640,7 +640,7 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
-  /@ianvs/prettier-plugin-sort-imports@4.1.1(prettier@3.0.3):
+  /@ianvs/prettier-plugin-sort-imports@4.1.1(prettier@3.1.0):
     resolution: {integrity: sha512-kJhXq63ngpTQ2dxgf5GasbPJWsJA3LgoOdd7WGhpUSzLgLgI4IsIzYkbJf9kmpOHe7Vdm/o3PcRA3jmizXUuAQ==}
     peerDependencies:
       '@vue/compiler-sfc': '>=3.0.0'
@@ -654,7 +654,7 @@ packages:
       '@babel/parser': 7.23.0
       '@babel/traverse': 7.23.2
       '@babel/types': 7.23.0
-      prettier: 3.0.3
+      prettier: 3.1.0
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
@@ -670,7 +670,7 @@ packages:
     resolution: {integrity: sha512-ZgHxf5HAPIaR0th+w0RUD62yF6vxitjlprSxmLJ1tam7FOekqRSDELMg4Cr/DdszG5YLsp5BG3FgHgqquQZbqw==}
     dependencies:
       '@swc/helpers': 0.5.3
-      intl-messageformat: 10.5.5
+      intl-messageformat: 10.5.8
     dev: false
 
   /@internationalized/number@3.4.0:
@@ -762,7 +762,7 @@ packages:
       '@react-aria/toast': 3.0.0-beta.2(react@18.2.0)
       '@react-aria/tooltip': 3.6.5(react@18.2.0)
       '@react-aria/utils': 3.22.0(react@18.2.0)
-      '@react-aria/virtualizer': 3.9.5(react-dom@18.2.0)(react@18.2.0)
+      '@react-aria/virtualizer': 3.9.7(react-dom@18.2.0)(react@18.2.0)
       '@react-aria/visually-hidden': 3.8.7(react@18.2.0)
       '@react-stately/calendar': 3.4.2(react@18.2.0)
       '@react-stately/checkbox': 3.6.0(react@18.2.0)
@@ -811,8 +811,8 @@ packages:
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@keystatic/core@0.2.1(next@14.0.2)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-SDqxfDebBQR4d5aOpfhbLKQ/mekZwyHwyauIEO5DhuxbuOvsYT1nMjNvsUUKc0hVkoexjZswU+J9QQO5y8tlmg==}
+  /@keystatic/core@0.2.2(next@14.0.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CbRVTrzeb3uF2iN+L3naLYhlwKUYi9Oqw7MRsAbFk38AMEdULi7xRTfSTXk5S/ogKJUaCBrukFcHK/0W50fkQw==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -842,7 +842,7 @@ packages:
       '@types/node': 16.11.13
       '@types/react': 18.2.37
       '@types/react-dom': 18.2.15
-      '@urql/core': 4.1.4(graphql@16.8.1)
+      '@urql/core': 4.2.0(graphql@16.8.1)
       '@urql/exchange-auth': 2.1.6(graphql@16.8.1)
       '@urql/exchange-graphcache': 6.3.3(graphql@16.8.1)
       '@urql/exchange-persisted': 4.1.0(graphql@16.8.1)
@@ -878,14 +878,14 @@ packages:
       slate: 0.91.4
       slate-history: 0.86.0(slate@0.91.4)
       slate-react: 0.91.11(react-dom@18.2.0)(react@18.2.0)(slate@0.91.4)
-      urql: 4.0.5(graphql@16.8.1)(react@18.2.0)
+      urql: 4.0.6(graphql@16.8.1)(react@18.2.0)
       zod: 3.22.4
     transitivePeerDependencies:
       - next
       - supports-color
     dev: false
 
-  /@keystatic/next@2.0.0(@keystatic/core@0.2.1)(next@14.0.2)(react-dom@18.2.0)(react@18.2.0):
+  /@keystatic/next@2.0.0(@keystatic/core@0.2.2)(next@14.0.2)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-z6aFubLuipPz60Rsjgm5p/SA8VhWJ2YVlXWlwmanb9S38xHPQiUJcak+xRY0GuEwzqdnJ49qzOJsM4tyPtpoFg==}
     peerDependencies:
       '@keystatic/core': '*'
@@ -894,7 +894,7 @@ packages:
       react-dom: ^18.2.0
     dependencies:
       '@babel/runtime': 7.23.2
-      '@keystatic/core': 0.2.1(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
+      '@keystatic/core': 0.2.2(next@14.0.2)(react-dom@18.2.0)(react@18.2.0)
       '@types/react': 18.2.37
       chokidar: 3.5.3
       next: 14.0.2(@babel/core@7.23.2)(react-dom@18.2.0)(react@18.2.0)
@@ -2272,8 +2272,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-aria/virtualizer@3.9.5(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-+lmPMlRlqk/vWHtL5BGYVGlvkwzrFZCp3n9J2dqOEqITrIFiBFKj7tDbEeV455E7i0ypwIKPdeYLDvIsxCqxgg==}
+  /@react-aria/virtualizer@3.9.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-xaLnzRypiJuGi91ns+LXLGfEhi4a2oz2ZUrZmIrMnBF3asEqULX1PEZoeSWrTWENzumM9D49fvB4JqonK0Ktwg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -3095,8 +3095,8 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  /@urql/core@4.1.4(graphql@16.8.1):
-    resolution: {integrity: sha512-wFm67yljv4uFAWNtPwcS1NMhF/n+p/68i+kZU6R1dPxhfq2nBW0142p4szeZsBDrtO7pBdOhp7YeSZROFFlXZg==}
+  /@urql/core@4.2.0(graphql@16.8.1):
+    resolution: {integrity: sha512-GRkZ4kECR9UohWAjiSk2UYUetco6/PqSrvyC4AH6g16tyqEShA63M232cfbE1J9XJPaGNjia14Gi+oOqzp144w==}
     dependencies:
       '@0no-co/graphql.web': 1.0.4(graphql@16.8.1)
       wonka: 6.3.4
@@ -3107,7 +3107,7 @@ packages:
   /@urql/exchange-auth@2.1.6(graphql@16.8.1):
     resolution: {integrity: sha512-snOlt7p5kYq0KnPDuXkKe2qW3/BucQZOElvTeo3svLQuk9JiNJVnm6ffQ6QGiGO+G3AtMrctnno1+X44fLtDuQ==}
     dependencies:
-      '@urql/core': 4.1.4(graphql@16.8.1)
+      '@urql/core': 4.2.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
@@ -3117,7 +3117,7 @@ packages:
     resolution: {integrity: sha512-uD8zzNIrxQHYCSgfIwYxzEmU1Ml4nJ6NTKwrDlpKmTLJa3aYuG3AoiO138HZBK1XGJ2QzV5yQPfcZsmbVFH8Yg==}
     dependencies:
       '@0no-co/graphql.web': 1.0.4(graphql@16.8.1)
-      '@urql/core': 4.1.4(graphql@16.8.1)
+      '@urql/core': 4.2.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
@@ -3126,7 +3126,7 @@ packages:
   /@urql/exchange-persisted@4.1.0(graphql@16.8.1):
     resolution: {integrity: sha512-zB6RcAF1z1TVFOvU8lOv02iUCHpzYVwp5G0aX3PlW3MVE2eueezw9XMzvYsEjXE78Rzz04Irf450YV0dkxKAaQ==}
     dependencies:
-      '@urql/core': 4.1.4(graphql@16.8.1)
+      '@urql/core': 4.2.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
@@ -4766,12 +4766,12 @@ packages:
       side-channel: 1.0.4
     dev: true
 
-  /intl-messageformat@10.5.5:
-    resolution: {integrity: sha512-sF+cJCfMn+kGcSeGGRcB1UpBH0/+Ko2KByHj2RpL2qIkRvsrnuDl8zufEkvk+GPosk932C6W1Kq24xWaw+2jDA==}
+  /intl-messageformat@10.5.8:
+    resolution: {integrity: sha512-NRf0jpBWV0vd671G5b06wNofAN8tp7WWDogMZyaU8GUAsmbouyvgwmFJI7zLjfAMpm3zK+vSwRP3jzaoIcMbaA==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.3
+      '@formatjs/ecma402-abstract': 1.18.0
       '@formatjs/fast-memoize': 2.2.0
-      '@formatjs/icu-messageformat-parser': 2.7.1
+      '@formatjs/icu-messageformat-parser': 2.7.3
       tslib: 2.6.2
     dev: false
 
@@ -5847,7 +5847,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.7(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.0.3):
+  /prettier-plugin-tailwindcss@0.5.7(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.1.0):
     resolution: {integrity: sha512-4v6uESAgwCni6YF6DwJlRaDjg9Z+al5zM4JfngcazMy4WEf/XkPS5TEQjbD+DZ5iNuG6RrKQLa/HuX2SYzC3kQ==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -5899,12 +5899,12 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.1.1(prettier@3.0.3)
-      prettier: 3.0.3
+      '@ianvs/prettier-plugin-sort-imports': 4.1.1(prettier@3.1.0)
+      prettier: 3.1.0
     dev: true
 
-  /prettier@3.0.3:
-    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+  /prettier@3.1.0:
+    resolution: {integrity: sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -6345,8 +6345,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shikiji@0.6.12:
-    resolution: {integrity: sha512-sm7Wg8P4w6T3quDAZQxvk0P02o2hheIFEdbaEuGOhGnqLDjVsP28GDUVPdgbacOIc1auapNVNCVEykhPploLyg==}
+  /shikiji@0.6.13:
+    resolution: {integrity: sha512-4T7X39csvhT0p7GDnq9vysWddf2b6BeioiN3Ymhnt3xcy9tXmDcnsEFVxX18Z4YcQgEE/w48dLJ4pPPUcG9KkA==}
     dependencies:
       hast-util-to-html: 9.0.0
     dev: false
@@ -6980,12 +6980,12 @@ packages:
       punycode: 2.3.1
     dev: true
 
-  /urql@4.0.5(graphql@16.8.1)(react@18.2.0):
-    resolution: {integrity: sha512-VicPBQXWicSbE+0oPzU2HMyDa//76FmwyQ7LayaYQxX97nhvMLs2ZWQdUmEzQQqvmw4YFaI0wPz1Qisp+PrZIQ==}
+  /urql@4.0.6(graphql@16.8.1)(react@18.2.0):
+    resolution: {integrity: sha512-meXJ2puOd64uCGKh7Fse2R7gPa8+ZpBOoA62jN7CPXXUt7SVZSdeXWSpB3HvlfzLUkEqsWbvshwrgeWRYNNGaQ==}
     peerDependencies:
       react: '>= 16.8.0'
     dependencies:
-      '@urql/core': 4.1.4(graphql@16.8.1)
+      '@urql/core': 4.2.0(graphql@16.8.1)
       react: 18.2.0
       wonka: 6.3.4
     transitivePeerDependencies:
