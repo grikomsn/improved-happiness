@@ -124,7 +124,15 @@ export default async function Page({ params }: Props) {
           //
         )}
       />
-      <TopScroller className="container pointer-events-none fixed inset-x-0 bottom-4 z-10" />
+      <div
+        className={cn(
+          "container pointer-events-none fixed inset-x-0 bottom-4 z-10",
+          "flex justify-end",
+          //
+        )}
+      >
+        <TopScroller />
+      </div>
     </ContainerSection>
   );
 }
