@@ -3,12 +3,12 @@
 import { cn } from "@/utils/ui";
 import { ArrowUpIcon } from "lucide-react";
 import { ComponentProps, useEffect, useRef } from "react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { navbarContainerClassNames, navbarItemClassNames } from "./navbar/styles";
 
 type Props = ComponentProps<"div">;
 
 export function TopScroller(props: Props) {
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,25 +27,25 @@ export function TopScroller(props: Props) {
 
   return (
     <div {...props}>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <button
-            className={cn(
-              "z-10 float-right h-9 w-9 rounded-full data-[visible=true]:pointer-events-auto",
-              "flex items-center justify-center",
-              "border border-neutral-500/25 bg-neutral-100 shadow-lg hover:text-amber-600 dark:bg-neutral-800 dark:hover:text-amber-500",
-              "opacity-0 data-[visible=true]:opacity-100",
-              "translate-y-3 transform-gpu transition data-[visible=true]:translate-y-0",
-            )}
-            data-visible="false"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            ref={buttonRef}
-          >
-            <ArrowUpIcon className="h-4 w-4" />
-          </button>
-        </TooltipTrigger>
-        <TooltipContent side="left">Back to top</TooltipContent>
-      </Tooltip>
+      <div
+        className={cn(
+          navbarContainerClassNames,
+          "px-2",
+          "data-[visible=true]:pointer-events-auto",
+          "opacity-0 data-[visible=true]:opacity-100",
+          "translate-y-3 transform-gpu transition data-[visible=true]:translate-y-0",
+        )}
+        ref={buttonRef}
+        data-visible="false"
+      >
+        <button
+          className={cn(navbarItemClassNames, "flex items-center space-x-1 text-sm")}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <span>Back to top</span>
+          <ArrowUpIcon className="h-4 w-4" />
+        </button>
+      </div>
     </div>
   );
 }

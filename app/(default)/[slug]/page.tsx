@@ -6,6 +6,7 @@ import { TopScroller } from "@/components/top-scroller";
 import { getCustomPage, getCustomPages } from "@/server/keystatic";
 import { defaultMetadata } from "@/site.config";
 import { formatLongDate } from "@/utils/intl";
+import { cn } from "@/utils/ui";
 import { DocumentRenderer } from "@keystatic/core/renderer";
 import { CalendarIcon } from "lucide-react";
 import { Metadata } from "next";
@@ -85,7 +86,15 @@ export default async function Page({ params }: Props) {
           renderers={renderers}
         />
       </ProseArticle>
-      <TopScroller className="container pointer-events-none fixed inset-x-0 bottom-4 z-10" />
+      <div
+        className={cn(
+          "container pointer-events-none fixed inset-x-0 bottom-4 z-10",
+          "flex justify-end",
+          //
+        )}
+      >
+        <TopScroller />
+      </div>
     </ContainerSection>
   );
 }
