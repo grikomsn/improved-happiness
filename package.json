@@ -1,6 +1,6 @@
 {
   "name": "@grikomsn/improved-happiness",
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "build": "next build",
     "dev": "PORT=6796 next dev",
