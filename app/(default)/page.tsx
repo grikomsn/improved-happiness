@@ -1,5 +1,6 @@
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
+import { MastodonIcon } from "@/components/icons/mastodon";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { getReader } from "@/server/keystatic";
@@ -12,6 +13,7 @@ const socialLinks = [
   { href: customMetadata.blueskyUrl, Icon: CloudIcon, label: "Bluesky" },
   { href: customMetadata.githubUrl, Icon: GithubIcon, label: "GitHub" },
   { href: customMetadata.linkedInUrl, Icon: LinkedinIcon, label: "LinkedIn" },
+  { href: customMetadata.mastodonUrl, Icon: MastodonIcon, label: "Mastodon" },
 ];
 
 export default async function Page() {
