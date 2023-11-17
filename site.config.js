@@ -21,7 +21,7 @@ const defaultMetadata = {
   url,
   bluesky: {
     actor: "did:plc:rue26duvigfk3zi5sselzwjc",
-    handle: "griko.blue",
+    handle: "griko.bsky.social",
   },
   github: {
     username: "grikomsn",
