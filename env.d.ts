@@ -8,7 +8,6 @@ declare namespace NodeJS {
     readonly REDIRECT_EDGE_CONFIG?: string;
 
     readonly NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?: string;
-    readonly NEXT_PUBLIC_REDIRECT_HOST?: string;
   }
 }
 
