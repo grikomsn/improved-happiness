@@ -1,20 +1,12 @@
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
-import { MastodonIcon } from "@/components/icons/mastodon";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { links } from "@/constants/links";
 import { getReader } from "@/server/keystatic";
-import { customMetadata, defaultMetadata } from "@/site.config";
+import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import { DocumentRenderer } from "@keystatic/core/renderer";
-import { CloudIcon, GithubIcon, LinkedinIcon } from "lucide-react";
-
-const socialLinks = [
-  { href: customMetadata.blueskyUrl, Icon: CloudIcon, label: "Bluesky" },
-  { href: customMetadata.githubUrl, Icon: GithubIcon, label: "GitHub" },
-  { href: customMetadata.linkedInUrl, Icon: LinkedinIcon, label: "LinkedIn" },
-  { href: customMetadata.mastodonUrl, Icon: MastodonIcon, label: "Mastodon" },
-];
 
 export default async function Page() {
   const query = await getReader().singletons.home.readOrThrow();
@@ -36,7 +28,7 @@ export default async function Page() {
         />
       </div>
       <ul className="flex items-center gap-x-4 [&_a:hover]:text-amber-600 dark:[&_a:hover]:text-amber-500">
-        {socialLinks.map(({ href, Icon, label }) => (
+        {links.map(({ href, Icon, label }) => (
           <li key={label}>
             <Tooltip disableHoverableContent>
               <TooltipTrigger asChild>
