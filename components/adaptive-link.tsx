@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef, useMemo } from "react";
 
 type Props = LinkProps & Omit<ComponentPropsWithoutRef<"a">, "href"> & { isExternal?: boolean };
 
-export function AdaptiveLink({ href, isExternal, ...props }: Props) {
+export function AdaptiveLink({ href, isExternal, rel = "", target, ...props }: Props) {
   const isActuallyExternal = useMemo(() => {
     if (typeof isExternal === "boolean") {
       return isExternal;
@@ -18,8 +18,8 @@ export function AdaptiveLink({ href, isExternal, ...props }: Props) {
 
   const externalProps = isActuallyExternal
     ? {
-        target: "_blank",
-        rel: "noopener noreferrer",
+        target: target || "_blank",
+        rel: [...new Set(["noopener", "noreferrer", ...rel.split(" ")])].filter(Boolean).join(" "),
       }
     : {};
 
