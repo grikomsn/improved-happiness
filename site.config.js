@@ -41,6 +41,7 @@ const customMetadata = {
   githubUrl: `https://github.com/${defaultMetadata.github.username}`,
   linkedInUrl: "https://linkedin.com/in/griko",
   mastodonUrl: "https://mastodon.social/@griko",
+  matrixUrl: "https://matrix.to/#/@griko:matrix.org",
   scheduleUrl: `https://nbrs.fyi/schedule`,
   xUrl: `https://x.com/${defaultMetadata.x.creator}`,
 };
