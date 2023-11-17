@@ -32,9 +32,13 @@ export default async function Page() {
           <li key={label}>
             <Tooltip disableHoverableContent>
               <TooltipTrigger asChild>
-                <AdaptiveLink href={href}>
+                <AdaptiveLink
+                  href={href}
+                  rel="me"
+                >
                   <Icon
                     aria-label={label}
+                    aria-hidden="true"
                     className="h-5 w-5"
                   />
                 </AdaptiveLink>
