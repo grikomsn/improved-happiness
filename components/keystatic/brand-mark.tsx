@@ -1,4 +1,6 @@
+import imageAvatar from "@/app/apple-icon.png";
 import { defaultMetadata } from "@/site.config";
+import Image from "next/image";
 
 interface Props {
   colorScheme: "light" | "dark";
@@ -6,9 +8,8 @@ interface Props {
 
 export function BrandMark({ colorScheme }: Props) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={`${defaultMetadata.url}/favicon.ico`}
+    <Image
+      src={imageAvatar}
       alt={defaultMetadata.title}
       className="mr-2 h-4 w-4"
     />

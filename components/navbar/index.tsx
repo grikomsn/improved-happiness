@@ -1,4 +1,4 @@
-import imageAvatar from "@/public/assets/home/avatar.png";
+import imageAvatar from "@/app/apple-icon.png";
 import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import Image from "next/image";
