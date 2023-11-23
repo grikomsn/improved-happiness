@@ -34,7 +34,10 @@ const nextConfig = {
     return arr;
   },
   rewrites: async () => [
-    //
+    {
+      source: "/.well-known/security.txt",
+      destination: "/security.txt",
+    },
   ],
   swcMinify: true,
   trailingSlash: false,
