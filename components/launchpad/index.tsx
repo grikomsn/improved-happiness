@@ -8,18 +8,19 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { ArrowRightIcon } from "lucide-react";
+import slugify from "@sindresorhus/slugify";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { tinykeys } from "tinykeys";
 import { create } from "zustand";
-import { routes } from "./navbar/routes";
+import { routeGroups } from "./routes";
 
 export function Launchpad() {
   const { open } = useStore();
   useEffect(() => {
     return tinykeys(window, {
-      "Meta+k": (event) => launchpad.open(),
+      "Meta+K": launchpad.open,
+      "Shift+Space": launchpad.open,
     });
   }, []);
 
@@ -29,27 +30,37 @@ export function Launchpad() {
     <CommandDialog
       open={open}
       onOpenChange={launchpad.set}
+      _command={{
+        loop: true,
+      }}
     >
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Navigation">
-          {routesWithHome.map((route, i) => (
-            <CommandItem
-              key={`route-${i}`}
-              onSelect={() => (router.push(route.href), launchpad.close())}
-            >
-              <ArrowRightIcon className="mr-2" />
-              <span>{route.children}</span>
-            </CommandItem>
-          ))}
-        </CommandGroup>
+        {routeGroups.map(({ heading, items }) => (
+          <CommandGroup
+            key={heading}
+            heading={heading}
+          >
+            {items.map(({ Icon, children, href }) => {
+              const key = slugify(children);
+              return (
+                <CommandItem
+                  key={key}
+                  onSelect={() => (router.push(href), launchpad.close())}
+                  value={key}
+                >
+                  <Icon className="mr-2" />
+                  <span>{children}</span>
+                </CommandItem>
+              );
+            })}
+          </CommandGroup>
+        ))}
       </CommandList>
     </CommandDialog>
   );
 }
-
-const routesWithHome = [{ children: "Home", href: "/" }, ...routes];
 
 const useStore = create(() => ({
   open: false,
