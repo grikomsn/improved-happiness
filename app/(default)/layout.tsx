@@ -1,4 +1,5 @@
 import { Launchpad } from "@/components/launchpad";
+import { MediaQuery } from "@/components/media-query";
 import { Navbar } from "@/components/navbar";
 import { cn } from "@/utils/ui";
 import { ReactNode } from "react";
@@ -24,7 +25,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         {children}
       </main>
       <Navbar className="sticky bottom-0 left-0 z-50" />
-      <Launchpad />
+      <MediaQuery query="min-width: 640px">
+        <Launchpad />
+      </MediaQuery>
     </Providers>
   );
 }
