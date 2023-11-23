@@ -8,14 +8,6 @@ export const homeSchema = singleton({
     contentField: "content",
   },
   schema: {
-    avatar: fields.image({
-      label: "Avatar",
-      directory: "public/assets/home",
-      publicPath: "/assets/home",
-      validation: {
-        isRequired: true,
-      },
-    }),
     content: fields.document({
       label: "Content",
       formatting: {
