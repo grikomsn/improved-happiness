@@ -40,6 +40,7 @@ const customMetadata = {
   emailUrl: `mailto:${defaultMetadata.email}`,
   githubUrl: `https://github.com/${defaultMetadata.github.username}`,
   linkedInUrl: "https://linkedin.com/in/griko",
+  keybaseUrl: "https://keybase.io/grikomsn",
   mastodonUrl: "https://mastodon.social/@griko",
   matrixUrl: "https://matrix.to/#/@griko:matrix.org",
   scheduleUrl: `https://nbrs.fyi/schedule`,
