@@ -43,7 +43,7 @@ const customMetadata = {
   keybaseUrl: "https://keybase.io/grikomsn",
   mastodonUrl: "https://mastodon.social/@griko",
   matrixUrl: "https://matrix.to/#/@griko:matrix.org",
-  scheduleUrl: `https://nbrs.fyi/schedule`,
+  scheduleUrl: `https://nbr.st/schedule`,
   xUrl: `https://x.com/${defaultMetadata.x.creator}`,
 };
 
