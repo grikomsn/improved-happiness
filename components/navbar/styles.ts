@@ -8,7 +8,7 @@ export const navbarContainerClassNames = cn(
 
 export const navbarItemClassNames = cn(
   "relative block h-9 p-2",
-  "hover:text-amber-600 dark:hover:text-amber-500",
+  "transition-colors hover:text-amber-600 dark:hover:text-amber-500",
 
   "before:absolute before:inset-x-2 before:h-px before:rounded-t-full",
   "before:-bottom-px hover:before:bottom-0",

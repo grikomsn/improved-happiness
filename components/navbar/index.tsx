@@ -1,4 +1,4 @@
-import imageAvatar from "@/public/assets/home/avatar.jpg";
+import imageAvatar from "@/public/assets/home/avatar.png";
 import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import Image from "next/image";
@@ -24,12 +24,17 @@ export function Navbar({ className, ...props }: Props) {
     >
       <Link
         href="/"
-        className="max-sm:hidden"
+        className={cn(
+          "group overflow-hidden max-sm:hidden",
+          "h-9 w-9 rounded-full border border-neutral-500/25 shadow-md",
+          "bg-neutral-500/25 transition hover:bg-amber-500/50",
+        )}
+        role="group"
       >
         <Image
           src={imageAvatar}
           alt={defaultMetadata.title}
-          className="h-9 w-9 rounded-full border border-neutral-500/25 shadow-md"
+          className="pointer-events-none"
         />
       </Link>
       <ul className={navbarContainerClassNames}>
