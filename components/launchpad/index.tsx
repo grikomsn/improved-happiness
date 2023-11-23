@@ -18,11 +18,12 @@ import { routeGroups } from "./routes";
 export function Launchpad() {
   const { open } = useStore();
   useEffect(() => {
+    if (open) return;
     return tinykeys(window, {
-      "Meta+K": launchpad.open,
-      "Shift+Space": launchpad.open,
+      "Meta+K": (event) => launchpad.open(),
+      "Shift+Space": (event) => (event.preventDefault(), launchpad.open()),
     });
-  }, []);
+  }, [open]);
 
   const router = useRouter();
 
