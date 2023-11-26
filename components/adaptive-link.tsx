@@ -16,12 +16,13 @@ export function AdaptiveLink({ href, isExternal, rel = "", target, ...props }: P
     }
   }, [href, isExternal]);
 
-  const externalProps = isActuallyExternal
-    ? {
-        target: target || "_blank",
-        rel: [...new Set(["noopener", "noreferrer", ...rel.split(" ")])].filter(Boolean).join(" "),
-      }
-    : {};
+  const externalProps = useMemo(() => {
+    if (!isActuallyExternal) return {};
+    return {
+      rel: mergeRelAttributes("noopener", "noreferrer", rel),
+      target: target || "_blank",
+    };
+  }, [isActuallyExternal, rel, target]);
 
   return (
     <Link
@@ -30,4 +31,8 @@ export function AdaptiveLink({ href, isExternal, rel = "", target, ...props }: P
       {...props}
     />
   );
+}
+
+function mergeRelAttributes(...args: string[]) {
+  return [...new Set(args.join(" ").split(" "))].filter(Boolean).join(" ");
 }
