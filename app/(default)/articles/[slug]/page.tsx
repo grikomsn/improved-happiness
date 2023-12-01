@@ -85,7 +85,7 @@ export default async function Page({ params }: Props) {
                 "absolute inset-y-1 -left-8 max-lg:hidden",
                 "z-10 h-8 w-8 rounded-full",
                 "flex items-center justify-center",
-                "hover:text-amber-600 dark:hover:text-amber-500",
+                "hover:text-primary-600 dark:hover:text-primary-500",
               )}
             >
               <ArrowLeftIcon className="h-4 w-4" />

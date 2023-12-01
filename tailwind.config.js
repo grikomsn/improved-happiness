@@ -1,5 +1,6 @@
 // @ts-check
 
+const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
@@ -24,6 +25,9 @@ const tailwindConfig = {
         "accordion-up": "accordion-up var(--duration,0.2s) ease-out",
         beams: "fade-in 0.8s ease-out, beams 30s linear infinite",
         "polaroid-enter": "polaroid-enter 0.8s cubic-bezier(0.08,0.82,0.17,1)",
+      },
+      colors: {
+        primary: colors.amber,
       },
       fontFamily: {
         mono: ["var(--font-geist-mono)", "Geist Mono Variable", "Geist Mono", ...defaultTheme.fontFamily.mono],
@@ -51,6 +55,14 @@ const tailwindConfig = {
           to: { opacity: "1", transform: "translateX(0%) rotate(1deg)" },
         },
       },
+      typography: (/** @type {{ theme: Function }} */ { theme }) => ({
+        primary: {
+          css: {
+            "--tw-prose-links": theme("colors.amber[600]"),
+            "--tw-prose-invert-links": theme("colors.amber[500]"),
+          },
+        },
+      }),
     },
   },
   plugins: [
