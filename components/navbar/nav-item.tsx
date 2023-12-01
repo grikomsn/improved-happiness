@@ -16,7 +16,7 @@ export function NavItem({ href = "#", className, ...props }: Props) {
       href={href}
       className={cn(
         navbarItemClassNames,
-        isActive && "!text-amber-600 dark:!text-amber-500",
+        isActive && "!text-primary-600 dark:!text-primary-500",
         className,
         //
       )}

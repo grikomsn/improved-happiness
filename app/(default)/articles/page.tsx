@@ -51,7 +51,7 @@ export default async function Page() {
                   href={entry.redirect.value?.url || `/articles/${slug}`}
                   className={cn(
                     "flex items-center gap-x-2 hover:underline",
-                    "text-amber-600 dark:text-amber-500",
+                    "text-primary-600 dark:text-primary-500",
                     "before:absolute before:-inset-4",
                   )}
                 >

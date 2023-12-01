@@ -53,7 +53,7 @@ export function MobileSheetButton({ className, ...props }: Props) {
             <li key={i}>
               <AdaptiveLink
                 {...route}
-                className={cn(pathname.startsWith(route.href) && "!text-amber-600 dark:!text-amber-500")}
+                className={cn(pathname.startsWith(route.href) && "!text-primary-600 dark:!text-primary-500")}
                 onClick={close}
               />
             </li>

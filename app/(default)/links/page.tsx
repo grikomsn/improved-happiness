@@ -47,7 +47,7 @@ export default async function Page() {
                 "h-full w-full sm:px-4 sm:py-8",
                 "flex flex-row items-center justify-start gap-4 hover:underline",
                 "sm:flex-col sm:justify-center sm:text-center",
-                "group-hover:text-amber-600 group-hover:dark:text-amber-500",
+                "group-hover:text-primary-600 group-hover:dark:text-primary-500",
                 "before:absolute before:-inset-4",
               )}
               rel="me"
