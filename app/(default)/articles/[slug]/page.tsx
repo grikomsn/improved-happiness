@@ -10,7 +10,7 @@ import { defaultMetadata } from "@/site.config";
 import { formatLongDate } from "@/utils/intl";
 import { cn } from "@/utils/ui";
 import { DocumentRenderer } from "@keystatic/core/renderer";
-import { ArrowLeftIcon, CalendarIcon } from "lucide-react";
+import { ArrowLeftIcon, CalendarIcon, SlashIcon } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
@@ -100,13 +100,20 @@ export default async function Page({ params }: Props) {
         </Tooltip>
       </div>
       <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{article.description}</p>
-      <div className="flex items-center gap-x-2 text-sm text-neutral-700 dark:text-neutral-300">
+      <div className="flex items-center gap-x-1 text-sm text-neutral-700 dark:text-neutral-300">
         <CalendarIcon
           className="h-3 w-3"
           aria-hidden="true"
         />
+        <span>Published at</span>
         <time dateTime={article.publishedAt}>{formatLongDate(article.publishedAt)}</time>
-        <div className="flex-grow" />
+        {article.updatedAt && (
+          <>
+            <SlashIcon className="mx-2 h-3 w-3" />
+            <span>Updated at</span>
+            <time dateTime={article.updatedAt}>{formatLongDate(article.updatedAt)}</time>
+          </>
+        )}
       </div>
       <br />
       <br />
@@ -116,14 +123,19 @@ export default async function Page({ params }: Props) {
           renderers={renderers}
         />
       </ProseArticle>
-      <Signature
-        className={cn(
-          "w-36 max-w-xs",
-          "stroke-4 fill-current stroke-current",
-          "-rotate-6 transform-gpu",
-          //
-        )}
-      />
+      <Link
+        href="/"
+        className="inline-block"
+      >
+        <Signature
+          className={cn(
+            "w-36 max-w-xs",
+            "stroke-4 fill-current stroke-current",
+            "-rotate-6 transform-gpu",
+            //
+          )}
+        />
+      </Link>
       <div
         className={cn(
           "container pointer-events-none fixed inset-x-0 bottom-4 z-10",
