@@ -24,6 +24,8 @@ export const getSortedArticles = cache(async () => {
 export const getCustomPages = cache(getReader().collections.pages.all);
 export const getCustomPage = cache(getReader().collections.pages.readOrThrow);
 
+export const getHomeSingleton = cache(getReader().singletons.home.readOrThrow);
+
 export const getProjects = cache(async () => {
   const reader = getReader();
   const { entries } = await reader.singletons.projects.readOrThrow();
