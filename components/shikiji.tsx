@@ -1,7 +1,7 @@
 import "server-only";
 
 import { ComponentProps } from "react";
-import { codeToHtml } from "shikiji/index.mjs";
+import { codeToHtml } from "shikiji";
 
 type Props = Omit<ComponentProps<"div">, "children"> & {
   code: string;
