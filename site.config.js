@@ -28,7 +28,7 @@ const defaultMetadata = {
     repository: "improved-happiness",
   },
   x: {
-    creator: "@___0xdeadbeef",
+    creator: "@griko_nibras",
     creatorId: "1702059533714309121",
   },
 };
