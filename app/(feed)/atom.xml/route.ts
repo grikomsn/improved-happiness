@@ -1,6 +1,6 @@
 import { getArticlesFeed } from "@/server/feed";
 
-export const revalidate = "force-cache";
+export const revalidate = false;
 
 export async function GET() {
   const feed = await getArticlesFeed();
