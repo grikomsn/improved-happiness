@@ -8,10 +8,10 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import { tinykeys } from "@/lib/tinykeys";
 import slugify from "@sindresorhus/slugify";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { tinykeys } from "tinykeys";
 import { create } from "zustand";
 import { routeGroups } from "./routes";
 
