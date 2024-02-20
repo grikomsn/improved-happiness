@@ -1,7 +1,7 @@
 import { cn } from "@/utils/ui";
 import { DocumentRendererProps } from "@keystatic/core/renderer";
 import { AdaptiveLink } from "../adaptive-link";
-import { Shikiji } from "../shikiji";
+import { Shiki } from "../shiki";
 import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 export function getArticleRenderers(): DocumentRendererProps["renderers"] {
@@ -16,7 +16,7 @@ export function getArticleRenderers(): DocumentRendererProps["renderers"] {
               //
             )}
           >
-            <Shikiji
+            <Shiki
               code={code}
               language={language}
               className="[&>pre]:p-4"

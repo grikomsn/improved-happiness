@@ -1,14 +1,14 @@
 import "server-only";
 
 import { ComponentProps } from "react";
-import { codeToHtml } from "shikiji";
+import { codeToHtml } from "shiki";
 
 type Props = Omit<ComponentProps<"div">, "children"> & {
   code: string;
   language: string;
 };
 
-export async function Shikiji({ code, language, ...props }: Props) {
+export async function Shiki({ code, language, ...props }: Props) {
   const __html = await codeToHtml(code, {
     lang: language,
     themes: {
@@ -24,5 +24,3 @@ export async function Shikiji({ code, language, ...props }: Props) {
     />
   );
 }
-
-// https://github.com/shikijs/shiki/issues/33#issuecomment-1677313632
