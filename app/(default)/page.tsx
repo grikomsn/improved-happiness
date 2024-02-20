@@ -24,7 +24,7 @@ export default async function Page() {
       <div
         className={cn(
           "mb-16 max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300",
-          "[&_a]:text-primary-600 dark:[&_a]:text-primary-500 [&_a:hover]:underline",
+          "[&_a:hover]:underline [&_a]:text-primary-600 dark:[&_a]:text-primary-500",
         )}
       >
         <DocumentRenderer
@@ -32,7 +32,7 @@ export default async function Page() {
           renderers={renderers}
         />
       </div>
-      <ul className="[&_a:hover]:text-primary-600 dark:[&_a:hover]:text-primary-500 flex items-center gap-x-4">
+      <ul className="flex items-center gap-x-4 [&_a:hover]:text-primary-600 dark:[&_a:hover]:text-primary-500">
         {links.map(({ href, Icon, label }) => (
           <li key={label}>
             <Tooltip disableHoverableContent>

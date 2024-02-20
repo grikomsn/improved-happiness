@@ -18,10 +18,10 @@ export default async function Page() {
       className="relative space-y-4"
       enableNavShadow
     >
-      <h1 className="max-w-screen-sm text-4xl font-bold">
+      <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Writing on software development and random personal tidbits.
       </h1>
-      <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">
+      <p className="max-w-screen-sm space-y-4 text-balance text-neutral-700 dark:text-neutral-300">
         All of my long-form thoughts on programming and probably about life, collected in chronological order.
       </p>
       <br />
@@ -41,8 +41,10 @@ export default async function Page() {
                 "before:-inset-1 hover:before:-inset-4",
               )}
             >
-              <div className="mb-2 text-xl font-bold">{entry.title}</div>
-              <div className="mb-2 text-sm text-neutral-700 dark:text-neutral-300">{entry.description}</div>
+              <div className="mb-2 text-balance text-xl font-bold">{entry.title}</div>
+              <div className="mb-2 text-balance text-sm text-neutral-700 dark:text-neutral-300">
+                {entry.description}
+              </div>
               <div className="mt-4 flex items-center gap-x-2 text-sm text-neutral-700 dark:text-neutral-300">
                 <CalendarIcon className="h-3 w-3" />
                 <time dateTime={entry.publishedAt}>{formatLongDate(entry.publishedAt)}</time>
