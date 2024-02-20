@@ -18,10 +18,10 @@ export default async function Page() {
       className="relative space-y-4"
       enableNavShadow
     >
-      <h1 className="max-w-screen-sm text-4xl font-bold">
+      <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Things I&apos;ve made trying to put my dent in the universe.
       </h1>
-      <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">
+      <p className="max-w-screen-sm space-y-4 text-balance text-neutral-700 dark:text-neutral-300">
         I&apos;ve worked on tons of little projects over the years but these are the ones that I&apos;m most proud of.
         Many of them are open-source, so if you see something that piques your interest, check out the code and
         contribute if you have ideas for how it can be improved.
@@ -71,7 +71,7 @@ export default async function Page() {
                 <ProjectIcon />
               </div>
               <div className="mb-2 text-lg font-bold">{project.name}</div>
-              <div className="mb-4 line-clamp-2 h-auto text-neutral-700 dark:text-neutral-300 sm:h-16">
+              <div className="mb-4 line-clamp-2 h-auto text-balance text-neutral-700 dark:text-neutral-300 sm:h-16">
                 {project.description}
               </div>
               <div className="mb-4 text-neutral-500">{project.subtitle}</div>
