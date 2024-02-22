@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         {children}
       </main>
       <Navbar className="sticky bottom-0 left-0 z-50" />
-      <MediaQuery query="min-width: 640px">
+      <MediaQuery query="(min-width: 640px)">
         <Launchpad />
       </MediaQuery>
     </Providers>

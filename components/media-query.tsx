@@ -12,7 +12,7 @@ export function MediaQuery({ query, children, defaultState = false }: Props) {
   const [matches, setMatches] = useState(() => defaultState);
 
   useEffect(() => {
-    const media = window.matchMedia(`(${query})`);
+    const media = window.matchMedia(query);
     setMatches(media.matches);
 
     function stateListener(event: MediaQueryListEvent) {
