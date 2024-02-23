@@ -8,6 +8,9 @@ dependencies:
   '@fontsource-variable/figtree':
     specifier: ^5.0.19
     version: 5.0.19
+  '@gsap/react':
+    specifier: ^2.1.0
+    version: 2.1.0
   '@keystatic/core':
     specifier: ^0.3.19
     version: 0.3.19(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
@@ -53,6 +56,9 @@ dependencies:
   geist:
     specifier: ^1.2.2
     version: 1.2.2(next@14.1.0)
+  gsap:
+    specifier: ^3.12.5
+    version: 3.12.5
   http-status-codes:
     specifier: ^2.3.0
     version: 2.3.0
@@ -83,6 +89,9 @@ dependencies:
   shiki:
     specifier: ^1.1.6
     version: 1.1.6
+  split-type:
+    specifier: ^0.3.4
+    version: 0.3.4
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
@@ -629,6 +638,13 @@ packages:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       graphql: 16.8.1
+    dev: false
+
+  /@gsap/react@2.1.0:
+    resolution: {integrity: sha512-pwdFXvOM5IsRZXpWTKkQoEjb3/iUjDCU1BCJDlE6pHgVjG+7Ep/7+sszUgqVZ2Jc0mR8gnhtDWyx5cQAT4kwQw==}
+    dependencies:
+      gsap: 3.12.5
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
@@ -5054,6 +5070,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: false
 
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
+    dev: false
+
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -7279,6 +7299,10 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /split-type@0.3.4:
+    resolution: {integrity: sha512-otEk9vnD8qwfLsk3Lx0gz+qRkNIJCx0mlyL47ImP/DjMuV39d75Lpfwjn9fHteDRz0aoOblSzQjSNT9+Sswxcg==}
+    dev: false
 
   /stdin-discarder@0.1.0:
     resolution: {integrity: sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==}

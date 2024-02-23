@@ -66,6 +66,7 @@ export default async function Page({ params }: Props) {
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
+      data-stagger-children
     >
       {article.cover && (
         // eslint-disable-next-line @next/next/no-img-element

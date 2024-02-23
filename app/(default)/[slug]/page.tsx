@@ -59,7 +59,10 @@ export default async function Page({ params }: Props) {
   const document = await page.content();
   const renderers = getArticleRenderers();
   return (
-    <ContainerSection className="relative space-y-4">
+    <ContainerSection
+      className="relative space-y-4"
+      data-stagger-children
+    >
       {page.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
