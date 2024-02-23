@@ -3,13 +3,11 @@ import { MediaQuery } from "@/components/media-query";
 import { Navbar } from "@/components/navbar";
 import { cn } from "@/utils/ui";
 import { ReactNode } from "react";
-import Effect from "./effect";
 import Providers from "./providers";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <Providers>
-      <Effect />
       <main
         className={cn(
           "relative flex-grow overflow-x-hidden",

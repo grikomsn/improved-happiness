@@ -17,6 +17,7 @@ export default async function Page() {
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
+      data-stagger-children
     >
       <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Writing on software development and random personal tidbits.
@@ -26,7 +27,10 @@ export default async function Page() {
       </p>
       <br />
       <br />
-      <ul className="max-w-screen-sm space-y-12">
+      <ul
+        className="max-w-screen-sm space-y-12"
+        data-stagger-children
+      >
         {articles.map(({ slug, entry }) => {
           const Icon = entry.redirect.value ? ExternalLinkIcon : ArrowRightIcon;
           if (entry.draft) return null;
