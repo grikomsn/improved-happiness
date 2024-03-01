@@ -18,20 +18,26 @@ export default function Template({ children }: { children: ReactNode }) {
         tl.current.kill();
         tl.current = gsap.timeline();
       }
-      const els = document.querySelectorAll<HTMLElement>("[data-stagger-lines], [data-stagger-children]");
+      const els = document.querySelectorAll<HTMLElement>(
+        "[data-stagger-lines], [data-stagger-children], [data-stagger]",
+      );
+      const newEls: Element[] = [];
+      const revertFns: Function[] = [];
       els.forEach((el) => {
         if (el.dataset.staggerChildren) {
-          tl.current.fromTo(el.children, tweenVars.from, tweenVars.to).then(() => {
-            visited.add(pathname);
-          });
+          newEls.push(...el.children);
         }
         if (el.dataset.staggerLines) {
           const splits = new SplitType(el, { types: "lines" });
-          tl.current.fromTo(splits.lines, tweenVars.from, tweenVars.to).then(() => {
-            splits.revert();
-            visited.add(pathname);
-          });
+          splits.lines && (newEls.push(...splits.lines), revertFns.push(splits.revert));
         }
+        if (el.dataset.stagger) {
+          newEls.push(el);
+        }
+      });
+      tl.current.fromTo(newEls, tweenVars.from, tweenVars.to).then(() => {
+        revertFns.forEach((fn) => fn());
+        visited.add(pathname);
       });
     },
     {
