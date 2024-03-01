@@ -2,9 +2,13 @@
 
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useGSAP } from "@gsap/react";
+import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { ThemeProvider } from "next-themes";
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Providers({ children }: { children: ReactNode }) {
   return (
@@ -18,6 +22,7 @@ export default function Providers({ children }: { children: ReactNode }) {
         {children}
         <RegisterCoordinates />
         <RegisterGsap />
+        <RegisterLenis />
       </TooltipProvider>
     </ThemeProvider>
   );
@@ -54,6 +59,41 @@ function RegisterGsap() {
   useGSAP(() => {
     gsap.fromTo("main", { opacity: 0, scale: 1.025 }, { opacity: 1, scale: 1, ease: "power1.out" });
   });
+
+  return null;
+}
+
+// https://stackblitz.com/edit/react-ts-uuwfed?file=App.tsx
+function RegisterLenis() {
+  const scrollRef = useRef<Lenis>();
+
+  useEffect(() => {
+    scrollRef.current = new Lenis({
+      autoResize: true,
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      gestureOrientation: "vertical",
+      infinite: false,
+      normalizeWheel: true,
+      orientation: "vertical",
+      smoothWheel: true,
+      syncTouch: true,
+      touchMultiplier: 2,
+    });
+
+    scrollRef.current.on("scroll", ScrollTrigger.update);
+
+    const updateFn: gsap.TickerCallback = (time) => {
+      scrollRef.current?.raf(time * 1000);
+    };
+
+    gsap.ticker.add(updateFn, /* once */ false, /* prioritize */ true);
+
+    return () => {
+      gsap.ticker.remove(updateFn);
+      scrollRef.current?.destroy();
+    };
+  }, []);
 
   return null;
 }
