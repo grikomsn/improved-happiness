@@ -52,7 +52,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <head />
       <body
         className={cn(
-          "overflow-y-scroll font-sans antialiased",
+          "overflow-x-hidden overflow-y-scroll font-sans antialiased",
           "relative flex min-h-screen flex-col items-stretch",
           "bg-neutral-50 dark:bg-neutral-900",
           "text-neutral-900 dark:text-neutral-50",

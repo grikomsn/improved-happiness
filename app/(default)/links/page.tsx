@@ -14,20 +14,20 @@ export default async function Page() {
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
+      data-stagger-children
     >
       <h1 className="max-w-screen-sm text-4xl font-bold">Links</h1>
-      <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">
+      <p className="!mb-16 max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">
         Here are links to other platforms where you can find me. Might not be active on all of them. Not promising
         anything.
       </p>
-      <br />
-      <br />
       <ul
         className={cn(
           "grid grid-cols-1 gap-8",
           "sm:max-w-screen-sm sm:grid-cols-3",
           //
         )}
+        data-stagger-children
       >
         {wholeLinks.map(({ href, Icon, label }, i) => (
           <li

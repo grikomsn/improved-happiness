@@ -1,6 +1,8 @@
 "use client";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ThemeProvider } from "next-themes";
 import { ReactNode, useEffect } from "react";
 
@@ -15,6 +17,7 @@ export default function Providers({ children }: { children: ReactNode }) {
       <TooltipProvider>
         {children}
         <RegisterCoordinates />
+        <RegisterGsap />
       </TooltipProvider>
     </ThemeProvider>
   );
@@ -43,6 +46,14 @@ function RegisterCoordinates() {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  return null;
+}
+
+function RegisterGsap() {
+  useGSAP(() => {
+    gsap.fromTo("main", { opacity: 0, scale: 1.025 }, { opacity: 1, scale: 1, ease: "power1.out" });
+  });
 
   return null;
 }

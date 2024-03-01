@@ -18,7 +18,7 @@ export default async function Page() {
       <Polaroid className="mb-16 lg:float-right lg:mb-8 lg:ml-8" />
       <article
         className="prose prose-primary text-balance pb-20 dark:prose-invert [&_a:hover]:underline [&_a]:no-underline"
-        data-split-lines
+        data-stagger-children
       >
         <DocumentRenderer
           document={document}

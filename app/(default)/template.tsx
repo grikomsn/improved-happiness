@@ -4,28 +4,35 @@ import { createTweenVars } from "@/utils/gsap";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import SplitType from "split-type";
 
 export default function Template({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const tl = useRef(gsap.timeline());
 
   useGSAP(
     () => {
       if (visited.has(pathname)) return;
-      {
-        const els = document.querySelectorAll<HTMLElement>("[data-split-lines]");
-        els.forEach((el) => {
-          const text = new SplitType(el, { types: "lines" });
-          gsap.fromTo(text.lines, tweenVars.from, tweenVars.to).then(() => visited.add(pathname));
-        });
+      if (tl.current.isActive()) {
+        tl.current.kill();
+        tl.current = gsap.timeline();
       }
-      {
-        const els = document.querySelectorAll<HTMLElement>("[data-stagger-children]");
-        els.forEach((el) => {
-          gsap.fromTo(el.children, tweenVars.from, tweenVars.to).then(() => visited.add(pathname));
-        });
-      }
+      const els = document.querySelectorAll<HTMLElement>("[data-stagger-lines], [data-stagger-children]");
+      els.forEach((el) => {
+        if (el.dataset.staggerChildren) {
+          tl.current.fromTo(el.children, tweenVars.from, tweenVars.to).then(() => {
+            visited.add(pathname);
+          });
+        }
+        if (el.dataset.staggerLines) {
+          const splits = new SplitType(el, { types: "lines" });
+          tl.current.fromTo(splits.lines, tweenVars.from, tweenVars.to).then(() => {
+            splits.revert();
+            visited.add(pathname);
+          });
+        }
+      });
     },
     {
       dependencies: [pathname],
