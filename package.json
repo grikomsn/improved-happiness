@@ -55,7 +55,8 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "shadcn-ui": "^0.8.0",
     "turbo": "^1.12.4",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "private": true,
   "license": "MIT"
