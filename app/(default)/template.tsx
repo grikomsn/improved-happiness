@@ -4,20 +4,15 @@ import { createTweenVars } from "@/utils/gsap";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { usePathname } from "next/navigation";
-import { ReactNode, useRef } from "react";
+import { ReactNode } from "react";
 import SplitType from "split-type";
 
 export default function Template({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const tl = useRef(gsap.timeline());
 
   useGSAP(
     () => {
       if (visited.has(pathname)) return;
-      if (tl.current.isActive()) {
-        tl.current.kill();
-        tl.current = gsap.timeline();
-      }
       const els = document.querySelectorAll<HTMLElement>(
         "[data-stagger-lines], [data-stagger-children], [data-stagger]",
       );
@@ -35,7 +30,7 @@ export default function Template({ children }: { children: ReactNode }) {
           newEls.push(el);
         }
       });
-      tl.current.fromTo(newEls, tweenVars.from, tweenVars.to).then(() => {
+      gsap.fromTo(newEls, tweenVars.from, tweenVars.to).then(() => {
         revertFns.forEach((fn) => fn());
         visited.add(pathname);
       });
