@@ -1,0 +1,39 @@
+.beams {
+  background-image: url(/beams.png);
+  background-position: -839px -520px;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background-position 1s ease-out;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .beams {
+    animation:
+      beams-fade-in 1s ease-out,
+      beams-hue-rotate 30s linear infinite;
+    background-position: var(--beams-x, -839px) var(--beams-y, -520px);
+  }
+}
+
+@keyframes beams-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes beams-hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
