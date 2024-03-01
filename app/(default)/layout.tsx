@@ -1,8 +1,8 @@
 import { Launchpad } from "@/components/launchpad";
 import { MediaQuery } from "@/components/media-query";
 import { Navbar } from "@/components/navbar";
-import { cn } from "@/utils/ui";
 import { ReactNode } from "react";
+import styles from "./layout.module.css";
 import Providers from "./providers";
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -11,15 +11,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <noscript>
         <style dangerouslySetInnerHTML={{ __html: noscriptStyles }} />
       </noscript>
-      <div
-        className={cn(
-          "fixed left-0 top-0 z-[-1] h-full w-full",
-          "bg-[url(/beams.png)] bg-[-839px_-520px] bg-no-repeat",
-          "transition-[background-position] duration-1000 ease-out",
-          "motion-safe:[background-position:_var(--beams-x,-839px)_var(--beams-y,-520px)]",
-          "motion-safe:animate-beams",
-        )}
-      />
+      <div className={styles.beams} />
       <main
         className="relative flex-grow overflow-x-hidden"
         style={{ opacity: 0 }}
