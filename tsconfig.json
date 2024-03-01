@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "plugins": [{ "name": "next" }],
+    "plugins": [{ "name": "next" }, { "name": "typescript-plugin-css-modules" }],
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
