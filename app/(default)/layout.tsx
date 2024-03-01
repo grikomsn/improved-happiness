@@ -19,9 +19,13 @@ export default function Layout({ children }: { children: ReactNode }) {
           "motion-safe:before:[background-position:_var(--beams-x,-839px)_var(--beams-y,-520px)]",
           "motion-safe:before:animate-beams",
         )}
+        style={{ opacity: 0 }}
       >
         {children}
       </main>
+      <noscript>
+        <style dangerouslySetInnerHTML={{ __html: noscriptStyles }} />
+      </noscript>
       <Navbar className="sticky bottom-0 left-0 z-50" />
       <MediaQuery query="(min-width: 640px)">
         <Launchpad />
@@ -29,3 +33,11 @@ export default function Layout({ children }: { children: ReactNode }) {
     </Providers>
   );
 }
+
+const css = String.raw;
+
+const noscriptStyles = css`
+  main {
+    opacity: 1 !important;
+  }
+`;

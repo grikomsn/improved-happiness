@@ -73,7 +73,7 @@ export default async function Page({ params }: Props) {
       )}
       <h1 className="max-w-screen-sm text-4xl font-bold">{page.title}</h1>
       <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{page.description}</p>
-      <div className="flex items-center gap-x-2 text-sm text-neutral-700 dark:text-neutral-300">
+      <div className="!mb-16 flex items-center gap-x-2 text-sm text-neutral-700 dark:text-neutral-300">
         <CalendarIcon
           className="h-3 w-3"
           aria-hidden="true"
@@ -81,8 +81,6 @@ export default async function Page({ params }: Props) {
         {page.updatedAt && <time dateTime={page.updatedAt}>{formatLongDate(page.updatedAt)}</time>}
         <div className="flex-grow" />
       </div>
-      <br />
-      <br />
       <ProseArticle>
         <DocumentRenderer
           document={document}

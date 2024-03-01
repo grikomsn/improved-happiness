@@ -101,7 +101,7 @@ export default async function Page({ params }: Props) {
         </Tooltip>
       </div>
       <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{article.description}</p>
-      <div className="flex items-center gap-x-1 text-sm text-neutral-700 dark:text-neutral-300">
+      <div className="!mb-16 flex items-center gap-x-1 text-sm text-neutral-700 dark:text-neutral-300">
         <CalendarIcon
           className="h-3 w-3"
           aria-hidden="true"
@@ -116,8 +116,6 @@ export default async function Page({ params }: Props) {
           </>
         )}
       </div>
-      <br />
-      <br />
       <ProseArticle>
         <DocumentRenderer
           document={document}

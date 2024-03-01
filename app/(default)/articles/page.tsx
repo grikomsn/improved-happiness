@@ -22,11 +22,9 @@ export default async function Page() {
       <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Writing on software development and random personal tidbits.
       </h1>
-      <p className="max-w-screen-sm space-y-4 text-balance text-neutral-700 dark:text-neutral-300">
+      <p className="!mb-16 max-w-screen-sm space-y-4 text-balance text-neutral-700 dark:text-neutral-300">
         All of my long-form thoughts on programming and probably about life, collected in chronological order.
       </p>
-      <br />
-      <br />
       <ul
         className="max-w-screen-sm space-y-12"
         data-stagger-children
