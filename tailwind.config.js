@@ -44,10 +44,6 @@ const tailwindConfig = {
           from: { filter: "hue-rotate(0deg)" },
           to: { filter: "hue-rotate(360deg)" },
         },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
         "polaroid-enter": {
           from: { opacity: "0", transform: "translateX(200%) rotate(30deg)" },
           to: { opacity: "1", transform: "translateX(0%) rotate(1deg)" },
