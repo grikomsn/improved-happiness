@@ -21,7 +21,6 @@ const tailwindConfig = {
       animation: {
         "accordion-down": "accordion-down var(--duration,0.2s) ease-out",
         "accordion-up": "accordion-up var(--duration,0.2s) ease-out",
-        "polaroid-enter": "polaroid-enter 0.8s cubic-bezier(0.08,0.82,0.17,1)",
       },
       colors: {
         primary: colors.amber,
@@ -38,10 +37,6 @@ const tailwindConfig = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
-        },
-        "polaroid-enter": {
-          from: { opacity: "0", transform: "translateX(200%) rotate(30deg)" },
-          to: { opacity: "1", transform: "translateX(0%) rotate(1deg)" },
         },
       },
       typography: (/** @type {{ theme: Function }} */ { theme }) => ({

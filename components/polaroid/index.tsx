@@ -6,6 +6,7 @@ import { cn } from "@/utils/ui";
 import Image from "next/image";
 import { ComponentProps } from "react";
 import { create } from "zustand";
+import styles from "./index.module.css";
 
 type Props = ComponentProps<"div">;
 
@@ -17,8 +18,8 @@ export function Polaroid({ className, ...props }: Props) {
       className={cn(
         "relative max-w-sm",
         "rounded bg-neutral-50 p-4 pb-16",
-        "rotate-1 transform-gpu motion-safe:data-[animated=false]:animate-polaroid-enter",
         "shadow-lg shadow-neutral-300 dark:shadow-neutral-700",
+        styles.polaroid,
         className,
       )}
       data-animated={store((state) => state.animated)}
@@ -41,7 +42,7 @@ export function Polaroid({ className, ...props }: Props) {
         className={cn(
           "absolute bottom-6 right-6 w-36 max-w-full",
           "fill-neutral-800 stroke-neutral-800 stroke-2",
-          "-rotate-6 transform-gpu",
+          "-rotate-6",
         )}
       />
     </div>
