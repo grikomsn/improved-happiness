@@ -13,9 +13,12 @@ export default function Template({ children }: { children: ReactNode }) {
   useGSAP(
     () => {
       if (visited.has(pathname)) return;
-      const els = document.querySelectorAll<HTMLElement>(
-        "[data-stagger-lines], [data-stagger-children], [data-stagger]",
-      );
+      const selectors = [
+        "[data-stagger-children]:not(data-ignore-gsap)",
+        "[data-stagger-lines]:not(data-ignore-gsap)",
+        "[data-stagger]:not(data-ignore-gsap)",
+      ];
+      const els = document.querySelectorAll<HTMLElement>(selectors.join());
       const newEls: Element[] = [];
       const revertFns: Function[] = [];
       els.forEach((el) => {
