@@ -22,7 +22,7 @@ export default function Providers({ children }: { children: ReactNode }) {
         {children}
         <RegisterCoordinates />
         <RegisterGsap />
-        <RegisterLenis />
+        {/* <RegisterLenis /> */}
       </TooltipProvider>
     </ThemeProvider>
   );
