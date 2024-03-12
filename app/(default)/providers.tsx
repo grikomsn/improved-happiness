@@ -57,7 +57,20 @@ function RegisterCoordinates() {
 
 function RegisterGsap() {
   useGSAP(() => {
-    gsap.fromTo("main", { opacity: 0, scale: 1.025 }, { opacity: 1, scale: 1, ease: "power1.out" });
+    const el = document.querySelector("main");
+    if (!el) return;
+    gsap.fromTo(
+      el,
+      { opacity: 0, scale: 1.025 },
+      {
+        opacity: 1,
+        scale: 1,
+        ease: "power1.out",
+        onComplete: () => {
+          el.removeAttribute("style");
+        },
+      },
+    );
   });
 
   return null;
