@@ -2,6 +2,18 @@
   "entries": [
     {
       "iconUrl": "/assets/projects/entries/0/iconUrl.png",
+      "name": "████",
+      "description": "██████████ ███ █████ ██ ██████",
+      "subtitle": "Web Development, Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "http://localhost:2467"
+        }
+      }
+    },
+    {
+      "iconUrl": "/assets/projects/entries/1/iconUrl.png",
       "name": "ibc.fun",
       "description": "Interchain transfers and swaps on any Cosmos chain",
       "subtitle": "Web Development, Former Maintainer",
@@ -13,7 +25,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/1/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/2/iconUrl.png",
       "name": "Graz",
       "description": "React hooks for Cosmos",
       "subtitle": "Creator, Maintainer, R&D",
@@ -25,7 +37,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/2/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/3/iconUrl.png",
       "name": "Recompose (formerly Composer)",
       "description": "Manage your authz and feegrants without hassle",
       "subtitle": "Web Development, UI/UX Design, R&D",
@@ -34,7 +46,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/3/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/4/iconUrl.png",
       "name": "SurabayaJS",
       "description": "User group based in Surabaya, Indonesia discussing everything JavaScript",
       "subtitle": "Web Development, Former OSS Maintainer",
@@ -46,7 +58,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/4/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/5/iconUrl.png",
       "name": "Deno Land Indonesia",
       "description": "Deno user group from and for Indonesia",
       "subtitle": "Web Development, Former OSS Maintainer",
@@ -59,7 +71,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/5/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/6/iconUrl.png",
       "name": "chakra-icons",
       "description": "Transform SVGs to React Chakra UI <Icon />",
       "subtitle": "OSS Maintainer",
@@ -106,7 +118,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/9/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/10/iconUrl.png",
       "name": "Juno Tools",
       "description": "Smart contract dashboard for Juno Network",
       "subtitle": "Web Development, UI/UX Design, R&D",
@@ -118,7 +130,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/10/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/11/iconUrl.png",
       "name": "Hyperspace",
       "description": "Decentralized browser-based blockchain",
       "subtitle": "Web Development",
