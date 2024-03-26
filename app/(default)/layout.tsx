@@ -30,6 +30,6 @@ const css = String.raw;
 
 const noscriptStyles = css`
   main {
-    opacity: 1 !important;
+    opacity: 1;
   }
 `;
