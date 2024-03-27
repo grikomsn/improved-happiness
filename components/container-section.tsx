@@ -13,7 +13,7 @@ export function ContainerSection({ enableNavShadow = false, className, ...props 
         enableNavShadow
           ? [
               "before:fixed before:inset-x-0 before:bottom-0 before:z-10 before:h-24",
-              "before:bg-gradient-to-t before:from-neutral-50 before:to-transparent dark:before:from-neutral-900",
+              "before:bg-gradient-to-t before:from-zinc-50 before:to-transparent dark:before:from-zinc-900",
               "before:pointer-events-none",
             ]
           : null,

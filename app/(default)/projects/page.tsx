@@ -22,7 +22,7 @@ export default async function Page() {
       <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Things I&apos;ve made trying to put my dent in the universe.
       </h1>
-      <p className="!mb-16 max-w-screen-sm space-y-4 text-balance text-neutral-700 dark:text-neutral-300">
+      <p className="!mb-16 max-w-screen-sm space-y-4 text-balance text-zinc-700 dark:text-zinc-300">
         I&apos;ve worked on tons of little projects over the years but these are the ones that I&apos;m most proud of.
         Many of them are open-source, so if you see something that piques your interest, check out the code and
         contribute if you have ideas for how it can be improved.
@@ -55,14 +55,14 @@ export default async function Page() {
                 "group relative text-sm",
                 "flex-col items-start sm:flex",
                 "before:absolute before:-z-10 before:transition-[opacity,inset]",
-                "before:rounded-lg before:bg-neutral-500/5 dark:before:bg-neutral-500/10",
+                "before:rounded-lg before:bg-zinc-500/5 dark:before:bg-zinc-500/10",
                 "before:opacity-0 hover:before:opacity-100",
                 "before:-inset-1 hover:before:-inset-4",
               )}
             >
               <div
                 className={cn(
-                  "mb-2 rounded-full border border-neutral-500/25 bg-neutral-500/5",
+                  "mb-2 rounded-full border border-zinc-500/25 bg-zinc-500/5",
                   "[&>*]:m-1 [&>*]:h-8 [&>*]:w-8 [&>*]:rounded-full [&>*]:object-cover",
                   "[&>svg]:p-1",
                   "float-right sm:float-none",
@@ -71,10 +71,10 @@ export default async function Page() {
                 <ProjectIcon />
               </div>
               <div className="mb-2 text-lg font-bold">{project.name}</div>
-              <div className="mb-4 line-clamp-2 h-auto text-balance text-neutral-700 dark:text-neutral-300 sm:h-16">
+              <div className="mb-4 line-clamp-2 h-auto text-balance text-zinc-700 dark:text-zinc-300 sm:h-16">
                 {project.description}
               </div>
-              <div className="mb-4 text-neutral-500">{project.subtitle}</div>
+              <div className="mb-4 text-zinc-500">{project.subtitle}</div>
               {project.link.value && (
                 <AdaptiveLink
                   href={project.link.value.href}

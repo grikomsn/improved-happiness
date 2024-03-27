@@ -1,6 +1,7 @@
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
+import { SimpleTooltip } from "@/components/simple-tooltip";
 import { links } from "@/constants/links";
 import { getHomeSingleton, getSortedArticles } from "@/server/keystatic";
 import { defaultMetadata } from "@/site.config";
@@ -27,15 +28,15 @@ export default async function Page() {
           className={cn(
             "flex items-center space-x-2 rounded-full px-2 py-1 pr-3 text-sm",
             "mb-8",
-            "border border-neutral-500/25 hover:border-neutral-500/50",
-            "bg-neutral-500/10",
-            "text-neutral-700 dark:text-neutral-300",
+            "border border-zinc-500/25 hover:border-zinc-500/50",
+            "bg-zinc-500/10",
+            "text-zinc-700 dark:text-zinc-300",
           )}
         >
           <span
             className={cn(
               "rounded-full px-2 py-px",
-              "text-xs font-semibold text-neutral-200",
+              "text-xs font-semibold text-zinc-200",
               "bg-primary-500/50",
               //
             )}
@@ -50,7 +51,7 @@ export default async function Page() {
       <p className="mb-8 text-2xl">{defaultMetadata.description}</p>
       <div
         className={cn(
-          "mb-16 max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300",
+          "mb-16 max-w-screen-sm space-y-4 text-zinc-700 dark:text-zinc-300",
           "[&_a:hover]:underline [&_a]:text-primary-600 dark:[&_a]:text-primary-500",
         )}
       >
@@ -59,19 +60,25 @@ export default async function Page() {
           renderers={renderers}
         />
       </div>
-      <ul className="flex items-center space-x-4 [&_a:hover]:text-primary-600 dark:[&_a:hover]:text-primary-500">
+      <ul className="flex items-center space-x-4">
         {links.map(({ href, Icon, label }) => (
           <li key={label}>
-            <AdaptiveLink
-              href={href}
-              rel="me"
+            <SimpleTooltip
+              label={label}
+              _content={{ side: "bottom" }}
             >
-              <Icon
-                aria-label={label}
-                aria-hidden="true"
-                className="h-5 w-5"
-              />
-            </AdaptiveLink>
+              <AdaptiveLink
+                href={href}
+                rel="me"
+                className="transition-colors hover:text-primary-600 dark:hover:text-primary-500"
+              >
+                <Icon
+                  aria-label={label}
+                  aria-hidden="true"
+                  className="h-5 w-5"
+                />
+              </AdaptiveLink>
+            </SimpleTooltip>
           </li>
         ))}
       </ul>

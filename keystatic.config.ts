@@ -1,5 +1,4 @@
 import { config } from "@keystatic/core";
-import { BrandMark } from "./components/keystatic/brand-mark";
 import { aboutSchema } from "./schema/about";
 import { articleSchema } from "./schema/articles";
 import { customPageSchema } from "./schema/custom-pages";
@@ -34,7 +33,6 @@ export default config({
   ui: {
     brand: {
       name: defaultMetadata.title,
-      mark: BrandMark,
     },
     navigation: {
       Content: ["articles", "pages", "projects"],

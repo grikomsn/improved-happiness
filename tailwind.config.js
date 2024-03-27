@@ -23,7 +23,7 @@ const tailwindConfig = {
         "accordion-up": "accordion-up var(--duration,0.2s) ease-out",
       },
       colors: {
-        primary: colors.amber,
+        primary: colors.violet,
       },
       fontFamily: {
         mono: ["var(--font-geist-mono)", "Geist Mono Variable", "Geist Mono", ...defaultTheme.fontFamily.mono],
@@ -42,8 +42,8 @@ const tailwindConfig = {
       typography: (/** @type {{ theme: Function }} */ { theme }) => ({
         primary: {
           css: {
-            "--tw-prose-links": theme("colors.amber[600]"),
-            "--tw-prose-invert-links": theme("colors.amber[500]"),
+            "--tw-prose-links": theme("colors.primary[600]"),
+            "--tw-prose-invert-links": theme("colors.primary[500]"),
           },
         },
       }),

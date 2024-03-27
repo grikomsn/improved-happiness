@@ -7,7 +7,7 @@
   "rsc": true,
   "style": "default",
   "tailwind": {
-    "baseColor": "neutral",
+    "baseColor": "slate",
     "config": "tailwind.config.js",
     "css": "styles/global.css",
     "cssVariables": false

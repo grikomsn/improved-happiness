@@ -17,7 +17,7 @@ export default async function Page() {
       data-stagger-children
     >
       <h1 className="max-w-screen-sm text-4xl font-bold">Links</h1>
-      <p className="!mb-16 max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">
+      <p className="!mb-16 max-w-screen-sm space-y-4 text-zinc-700 dark:text-zinc-300">
         Here are links to other platforms where you can find me. Might not be active on all of them. Not promising
         anything.
       </p>
@@ -36,7 +36,7 @@ export default async function Page() {
               "group relative text-sm",
               "flex-col items-start sm:flex",
               "before:absolute before:-z-10 before:transition-[opacity,inset]",
-              "before:rounded-lg before:bg-neutral-500/5 dark:before:bg-neutral-500/10",
+              "before:rounded-lg before:bg-zinc-500/5 dark:before:bg-zinc-500/10",
               "before:opacity-0 hover:before:opacity-100",
               "before:-inset-1 hover:before:-inset-4",
             )}

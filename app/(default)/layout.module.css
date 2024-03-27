@@ -33,7 +33,16 @@
   0% {
     filter: hue-rotate(0deg);
   }
+  25% {
+    filter: hue-rotate(60deg);
+  }
+  50% {
+    filter: hue-rotate(0deg);
+  }
+  75% {
+    filter: hue-rotate(-60deg);
+  }
   100% {
-    filter: hue-rotate(360deg);
+    filter: hue-rotate(0deg);
   }
 }

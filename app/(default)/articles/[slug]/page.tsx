@@ -73,7 +73,7 @@ export default async function Page({ params }: Props) {
         <img
           src={article.cover}
           alt="article cover image"
-          className="mb-8 aspect-video w-full max-w-screen-sm rounded bg-neutral-500 object-cover"
+          className="mb-8 aspect-video w-full max-w-screen-sm rounded bg-zinc-500 object-cover"
         />
       )}
       <div className="relative">
@@ -100,8 +100,8 @@ export default async function Page({ params }: Props) {
           </TooltipContent>
         </Tooltip>
       </div>
-      <p className="max-w-screen-sm space-y-4 text-neutral-700 dark:text-neutral-300">{article.description}</p>
-      <div className="!mb-16 flex items-center gap-x-1 text-sm text-neutral-700 dark:text-neutral-300">
+      <p className="max-w-screen-sm space-y-4 text-zinc-700 dark:text-zinc-300">{article.description}</p>
+      <div className="!mb-16 flex items-center gap-x-1 text-sm text-zinc-700 dark:text-zinc-300">
         <CalendarIcon
           className="h-3 w-3"
           aria-hidden="true"
