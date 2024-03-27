@@ -26,8 +26,8 @@ export function Navbar({ className, ...props }: Props) {
         href="/"
         className={cn(
           "group overflow-hidden max-sm:hidden",
-          "h-9 w-9 rounded-full border border-neutral-500/25 shadow-md",
-          "bg-neutral-500/25 transition hover:bg-primary-500/50",
+          "h-9 w-9 rounded-full border border-zinc-500/25 shadow-md",
+          "bg-zinc-500/25 transition hover:bg-primary-500/50",
         )}
         role="group"
       >

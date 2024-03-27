@@ -12,7 +12,7 @@ export function getArticleRenderers(): DocumentRendererProps["renderers"] {
           <ScrollArea
             className={cn(
               "not-prose relative rounded-lg text-sm",
-              "border border-neutral-500/25",
+              "border border-zinc-500/25",
               //
             )}
           >

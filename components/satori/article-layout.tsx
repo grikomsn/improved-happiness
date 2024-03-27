@@ -11,7 +11,7 @@ export function ArticleLayout({ title, description, imgSrc = "", path = defaultM
   }
   return (
     <div
-      tw="flex h-full w-full p-16 text-neutral-50 bg-neutral-900"
+      tw="flex h-full w-full p-16 text-zinc-50 bg-zinc-900"
       style={{ backgroundImage }}
     >
       {imgSrc && (

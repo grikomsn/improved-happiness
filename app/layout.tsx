@@ -55,8 +55,8 @@ export default function Layout({ children }: { children: ReactNode }) {
         className={cn(
           "overflow-x-hidden overflow-y-scroll font-sans antialiased",
           "relative flex min-h-screen flex-col items-stretch",
-          "bg-neutral-50 dark:bg-neutral-900",
-          "text-neutral-900 dark:text-neutral-50",
+          "bg-zinc-50 dark:bg-zinc-900",
+          "text-zinc-900 dark:text-zinc-50",
           GeistMono.variable,
         )}
       >

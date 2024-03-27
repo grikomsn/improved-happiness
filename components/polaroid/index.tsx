@@ -17,8 +17,8 @@ export function Polaroid({ className, ...props }: Props) {
     <div
       className={cn(
         "relative max-w-sm",
-        "rounded bg-neutral-50 p-4 pb-16",
-        "shadow-lg shadow-neutral-300 dark:shadow-neutral-700",
+        "rounded bg-zinc-50 p-4 pb-16",
+        "shadow-lg shadow-zinc-300 dark:shadow-zinc-700",
         styles.polaroid,
         className,
       )}
@@ -26,7 +26,7 @@ export function Polaroid({ className, ...props }: Props) {
       onAnimationEnd={() => store.setState({ animated: true })}
       {...props}
     >
-      <div className="bg-neutral-500">
+      <div className="bg-zinc-500">
         <Image
           src={imageCover}
           alt="cover"
@@ -41,7 +41,7 @@ export function Polaroid({ className, ...props }: Props) {
       <Signature
         className={cn(
           "absolute bottom-6 right-6 w-36 max-w-full",
-          "fill-neutral-800 stroke-neutral-800 stroke-2",
+          "fill-zinc-800 stroke-zinc-800 stroke-2",
           "-rotate-6",
         )}
       />
