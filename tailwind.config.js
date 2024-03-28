@@ -23,7 +23,7 @@ const tailwindConfig = {
         "accordion-up": "accordion-up var(--duration,0.2s) ease-out",
       },
       colors: {
-        primary: colors.violet,
+        primary: colors.amber,
       },
       fontFamily: {
         mono: ["var(--font-geist-mono)", "Geist Mono Variable", "Geist Mono", ...defaultTheme.fontFamily.mono],
