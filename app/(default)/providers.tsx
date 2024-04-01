@@ -3,11 +3,10 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { ThemeProvider } from "next-themes";
 import { ReactNode, useEffect } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 export default function Providers({ children }: { children: ReactNode }) {
   return (
