@@ -14,7 +14,6 @@ export default async function Page() {
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
-      data-stagger-children
     >
       <h1 className="max-w-screen-sm text-4xl font-bold">Links</h1>
       <p className="!mb-16 max-w-screen-sm space-y-4 text-zinc-700 dark:text-zinc-300">
@@ -27,7 +26,6 @@ export default async function Page() {
           "sm:max-w-screen-sm sm:grid-cols-3",
           //
         )}
-        data-stagger-children
       >
         {wholeLinks.map(({ href, Icon, label }, i) => (
           <li

@@ -17,7 +17,6 @@ export default async function Page() {
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
-      data-stagger-children
     >
       <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Writing on software development and random personal tidbits.
@@ -25,10 +24,7 @@ export default async function Page() {
       <p className="!mb-16 max-w-screen-sm space-y-4 text-balance text-zinc-700 dark:text-zinc-300">
         All of my long-form thoughts on programming and probably about life, collected in chronological order.
       </p>
-      <ul
-        className="max-w-screen-sm space-y-12"
-        data-stagger-children
-      >
+      <ul className="max-w-screen-sm space-y-12">
         {articles.map(({ slug, entry }) => {
           const Icon = entry.redirect.value ? ExternalLinkIcon : ArrowRightIcon;
           if (entry.draft) return null;

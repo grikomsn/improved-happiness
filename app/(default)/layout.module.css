@@ -1,6 +1,6 @@
 .beams {
   background-image: url(/beams.png);
-  background-position: -839px -520px;
+  background-position: -100px -520px;
   background-repeat: no-repeat;
   height: 100%;
   left: 0;
@@ -16,7 +16,7 @@
     animation:
       beams-fade-in 1s ease-out,
       beams-hue-rotate 30s linear infinite;
-    background-position: var(--beams-x, -839px) var(--beams-y, -520px);
+    background-position: var(--beams-x, -100px) var(--beams-y, -520px);
   }
 }
 

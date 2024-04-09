@@ -17,7 +17,6 @@ export default async function Page() {
     <ContainerSection
       className="relative space-y-4"
       enableNavShadow
-      data-stagger-children
     >
       <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
         Things I&apos;ve made trying to put my dent in the universe.
@@ -29,11 +28,10 @@ export default async function Page() {
       </p>
       <ul
         className={cn(
-          "grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3",
+          "grid grid-cols-1 gap-12 sm:grid-cols-2",
           "sm:max-w-screen-sm lg:max-w-screen-lg",
           //
         )}
-        data-stagger-children
       >
         {projects.map((project, i) => {
           function ProjectIcon() {

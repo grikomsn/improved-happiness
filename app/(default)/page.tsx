@@ -18,10 +18,7 @@ export default async function Page() {
   const [firstArticle] = await getSortedArticles();
 
   return (
-    <ContainerSection
-      className="relative flex flex-col items-start"
-      data-stagger-children
-    >
+    <ContainerSection className="relative flex flex-col items-start">
       {firstArticle && (
         <Link
           href={`/articles/${firstArticle.slug}`}

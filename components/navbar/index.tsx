@@ -16,7 +16,7 @@ export function Navbar({ className, ...props }: Props) {
   return (
     <nav
       className={cn(
-        "container flex items-center gap-x-2 py-4 text-sm",
+        "container flex items-center justify-center gap-x-2 py-4 text-sm",
         "pointer-events-none [&>*]:pointer-events-auto",
         className,
       )}
@@ -49,10 +49,8 @@ export function Navbar({ className, ...props }: Props) {
         <li className="sm:hidden">
           <MobileSheetButton />
         </li>
-      </ul>
-      <div className={cn(navbarContainerClassNames, "px-2")}>
         <ThemeButton />
-      </div>
+      </ul>
     </nav>
   );
 }
