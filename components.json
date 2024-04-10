@@ -7,7 +7,7 @@
   "rsc": true,
   "style": "default",
   "tailwind": {
-    "baseColor": "slate",
+    "baseColor": "zinc",
     "config": "tailwind.config.js",
     "css": "styles/global.css",
     "cssVariables": false
