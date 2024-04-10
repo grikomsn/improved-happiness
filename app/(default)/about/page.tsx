@@ -19,7 +19,7 @@ export default async function Page() {
       <div className="mb-8 ml-4 w-[300px] max-w-full rotate-3 max-md:mx-auto md:float-right">
         <Polaroid />
       </div>
-      <ProseArticle>
+      <ProseArticle className="text-balance">
         <DocumentRenderer
           document={document}
           renderers={renderers}
