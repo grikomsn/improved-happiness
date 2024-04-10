@@ -26,6 +26,7 @@ export function AdaptiveLink({ href, isExternal, rel = "", target, ...props }: P
 
   return (
     <Link
+      data-external={isActuallyExternal}
       href={href}
       {...externalProps}
       {...props}
