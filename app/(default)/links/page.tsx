@@ -17,7 +17,7 @@ export default async function Page() {
         Here are links to other platforms where you can find me. Might not be active on all of them. Not promising
         anything.
       </p>
-      <ul className="grid grid-cols-1 gap-8">
+      <ul className="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {wholeLinks.map(({ href, Icon, label }, i) => (
           <li
             key={i}
