@@ -17,7 +17,6 @@ export function NavItem({ href = "#", className, ...props }: Props) {
       className={cn(
         navbarItemClassNames,
         isActive && "!text-primary-600 dark:!text-primary-500",
-        "data-[external=true]:cursor-ne-resize",
         className,
         //
       )}

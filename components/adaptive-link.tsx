@@ -1,14 +1,18 @@
+import { cn } from "@/utils/ui";
 import Link, { LinkProps } from "next/link";
 import { ComponentPropsWithoutRef, useMemo } from "react";
 
 type Props = LinkProps & Omit<ComponentPropsWithoutRef<"a">, "href"> & { isExternal?: boolean };
 
-export function AdaptiveLink({ href, isExternal, rel = "", target, ...props }: Props) {
+export function AdaptiveLink({ className, href, isExternal, rel = "", target, ...props }: Props) {
   const isActuallyExternal = useMemo(() => {
     if (typeof isExternal === "boolean") {
       return isExternal;
     }
     if (typeof href === "string") {
+      if (href.startsWith("mailto:")) {
+        return false;
+      }
       return href.startsWith("http");
     }
     if (typeof href === "object") {
@@ -28,6 +32,7 @@ export function AdaptiveLink({ href, isExternal, rel = "", target, ...props }: P
     <Link
       data-external={isActuallyExternal}
       href={href}
+      className={cn("data-[external=true]:cursor-ne-resize", className)}
       {...externalProps}
       {...props}
     />
