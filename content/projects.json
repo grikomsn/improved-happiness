@@ -95,6 +95,28 @@
       }
     },
     {
+      "name": "Tamper GitHub",
+      "description": "Userscript to disable GitHub turbolinks and hide unnecessary elements",
+      "subtitle": "Creator, Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://github.com/grikomsn/tamper-github"
+        }
+      }
+    },
+    {
+      "name": "Tamper Tokped",
+      "description": "Userscript to improve Tokopedia by overriding and/or hiding elements",
+      "subtitle": "Creator, Maintainer",
+      "link": {
+        "discriminant": true,
+        "value": {
+          "href": "https://github.com/grikomsn/tamper-tokped"
+        }
+      }
+    },
+    {
       "name": "Style Guide",
       "description": "ESLint and Prettier style guide for various personal projects",
       "subtitle": "Creator, Maintainer",
@@ -118,7 +140,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/10/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/12/iconUrl.png",
       "name": "Juno Tools",
       "description": "Smart contract dashboard for Juno Network",
       "subtitle": "Web Development, UI/UX Design, R&D",
@@ -130,7 +152,7 @@
       }
     },
     {
-      "iconUrl": "/assets/projects/entries/11/iconUrl.png",
+      "iconUrl": "/assets/projects/entries/13/iconUrl.png",
       "name": "Hyperspace",
       "description": "Decentralized browser-based blockchain",
       "subtitle": "Web Development, Former Maintainer",
