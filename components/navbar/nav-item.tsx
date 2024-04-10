@@ -4,7 +4,7 @@ import { cn } from "@/utils/ui";
 import { usePathname } from "next/navigation";
 import { ComponentPropsWithoutRef } from "react";
 import { AdaptiveLink } from "../adaptive-link";
-import { navbarItemClassNames } from "./styles";
+import { navbarItemClassNames } from "./classnames";
 
 type Props = ComponentPropsWithoutRef<"a">;
 
@@ -17,6 +17,7 @@ export function NavItem({ href = "#", className, ...props }: Props) {
       className={cn(
         navbarItemClassNames,
         isActive && "!text-primary-600 dark:!text-primary-500",
+        "data-[external=true]:cursor-ne-resize",
         className,
         //
       )}

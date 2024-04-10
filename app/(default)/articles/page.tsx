@@ -14,17 +14,12 @@ export const metadata: Metadata = {
 export default async function Page() {
   const articles = await getSortedArticles();
   return (
-    <ContainerSection
-      className="relative space-y-4"
-      enableNavShadow
-    >
-      <h1 className="max-w-screen-sm text-balance text-4xl font-bold">
-        Writing on software development and random personal tidbits.
-      </h1>
-      <p className="!mb-16 max-w-screen-sm space-y-4 text-balance text-zinc-700 dark:text-zinc-300">
+    <ContainerSection className="relative space-y-4">
+      <h1 className="text-balance text-4xl font-bold">Writing on software development and random personal tidbits.</h1>
+      <p className="!mb-16 space-y-4 text-balance text-zinc-700 dark:text-zinc-300">
         All of my long-form thoughts on programming and probably about life, collected in chronological order.
       </p>
-      <ul className="max-w-screen-sm space-y-12">
+      <ul className="space-y-12">
         {articles.map(({ slug, entry }) => {
           const Icon = entry.redirect.value ? ExternalLinkIcon : ArrowRightIcon;
           if (entry.draft) return null;

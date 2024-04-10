@@ -2,12 +2,10 @@
 
 import { cn } from "@/utils/ui";
 import { ArrowUpIcon } from "lucide-react";
-import { ComponentProps, useEffect, useRef } from "react";
-import { navbarContainerClassNames, navbarItemClassNames } from "./navbar/styles";
+import { useEffect, useRef } from "react";
+import { navbarContainerClassNames, navbarItemClassNames } from "./navbar/classnames";
 
-type Props = ComponentProps<"div">;
-
-export function TopScroller(props: Props) {
+export function TopScroller() {
   const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,25 +24,25 @@ export function TopScroller(props: Props) {
   }, []);
 
   return (
-    <div {...props}>
-      <div
-        className={cn(
-          navbarContainerClassNames,
-          "px-2",
-          "data-[visible=true]:pointer-events-auto",
-          "opacity-0 data-[visible=true]:opacity-100",
-          "translate-y-3 transform-gpu transition data-[visible=true]:translate-y-0",
-        )}
-        ref={buttonRef}
-        data-visible="false"
-      >
-        <button
-          className={cn(navbarItemClassNames, "flex items-center space-x-1 text-sm")}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <span>Back to top</span>
-          <ArrowUpIcon className="h-4 w-4" />
-        </button>
+    <div
+      className={cn(
+        "fixed inset-x-0 bottom-0 z-10",
+        "opacity-0 data-[visible=true]:opacity-100",
+        "translate-y-3 transform-gpu transition data-[visible=true]:translate-y-0",
+      )}
+      data-visible="false"
+      ref={buttonRef}
+    >
+      <div className="pointer-events-auto isolate flex items-center justify-center py-4 text-sm">
+        <div className={navbarContainerClassNames}>
+          <button
+            className={cn(navbarItemClassNames, "flex items-center space-x-1 text-sm")}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <span>Back to top</span>
+            <ArrowUpIcon className="h-4 w-4" />
+          </button>
+        </div>
       </div>
     </div>
   );

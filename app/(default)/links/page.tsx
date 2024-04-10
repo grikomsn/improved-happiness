@@ -11,22 +11,13 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   return (
-    <ContainerSection
-      className="relative space-y-4"
-      enableNavShadow
-    >
-      <h1 className="max-w-screen-sm text-4xl font-bold">Links</h1>
-      <p className="!mb-16 max-w-screen-sm space-y-4 text-zinc-700 dark:text-zinc-300">
+    <ContainerSection className="relative space-y-4">
+      <h1 className="text-4xl font-bold">Links</h1>
+      <p className="!mb-16 space-y-4 text-zinc-700 dark:text-zinc-300">
         Here are links to other platforms where you can find me. Might not be active on all of them. Not promising
         anything.
       </p>
-      <ul
-        className={cn(
-          "grid grid-cols-1 gap-8",
-          "sm:max-w-screen-sm sm:grid-cols-3",
-          //
-        )}
-      >
+      <ul className="grid grid-cols-1 gap-8">
         {wholeLinks.map(({ href, Icon, label }, i) => (
           <li
             key={i}

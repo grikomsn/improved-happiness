@@ -12,7 +12,7 @@ import { DropdownMenuItemIndicator } from "@radix-ui/react-dropdown-menu";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { ComponentPropsWithoutRef } from "react";
-import { navbarItemClassNames } from "./styles";
+import { navbarItemClassNames } from "./classnames";
 
 type Props = ComponentPropsWithoutRef<"button">;
 

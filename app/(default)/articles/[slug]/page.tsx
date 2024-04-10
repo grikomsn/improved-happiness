@@ -63,27 +63,24 @@ export default async function Page({ params }: Props) {
   const document = await article.content();
   const renderers = getArticleRenderers();
   return (
-    <ContainerSection
-      className="relative space-y-4"
-      enableNavShadow
-    >
+    <ContainerSection className="relative space-y-4">
       {article.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={article.cover}
           alt="article cover image"
-          className="mb-8 aspect-video w-full max-w-screen-sm rounded bg-zinc-500 object-cover"
+          className="mb-8 aspect-video w-full rounded bg-zinc-500 object-cover"
         />
       )}
       <div className="relative">
-        <h1 className="max-w-screen-sm text-4xl font-bold">{article.title}</h1>
+        <h1 className="text-4xl font-bold max-sm:text-3xl">{article.title}</h1>
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
               href="/articles"
               className={cn(
-                "absolute inset-y-1 -left-8 max-lg:hidden",
-                "z-10 h-8 w-8 rounded-full",
+                "absolute inset-y-1 -left-12 max-lg:hidden",
+                "h-8 w-8 rounded-full",
                 "flex items-center justify-center",
                 "hover:text-primary-600 dark:hover:text-primary-500",
               )}
@@ -99,7 +96,7 @@ export default async function Page({ params }: Props) {
           </TooltipContent>
         </Tooltip>
       </div>
-      <p className="max-w-screen-sm space-y-4 text-zinc-700 dark:text-zinc-300">{article.description}</p>
+      <p className="space-y-4 text-zinc-700 dark:text-zinc-300">{article.description}</p>
       <div className="!mb-16 flex items-center gap-x-1 text-sm text-zinc-700 dark:text-zinc-300">
         <CalendarIcon
           className="h-3 w-3"
@@ -134,15 +131,7 @@ export default async function Page({ params }: Props) {
           )}
         />
       </Link>
-      <div
-        className={cn(
-          "container pointer-events-none fixed inset-x-0 bottom-4 z-10",
-          "flex justify-end",
-          //
-        )}
-      >
-        <TopScroller />
-      </div>
+      <TopScroller />
     </ContainerSection>
   );
 }

@@ -4,13 +4,13 @@ import { cn } from "@/utils/ui";
 import { usePathname } from "next/navigation";
 import { ComponentPropsWithoutRef, useEffect, useState } from "react";
 import { AdaptiveLink } from "../adaptive-link";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
+import { navbarItemClassNames } from "./classnames";
 import { routes } from "./routes";
-import { navbarItemClassNames } from "./styles";
 
 type Props = ComponentPropsWithoutRef<"button">;
 
-export function MobileSheetButton({ className, ...props }: Props) {
+export function MobileDrawerButton({ className, ...props }: Props) {
   const [state, setState] = useState(() => false);
   const close = () => setState(false);
 
@@ -18,25 +18,22 @@ export function MobileSheetButton({ className, ...props }: Props) {
   useEffect(() => close(), [pathname]);
 
   return (
-    <Sheet
+    <Drawer
       open={state}
       onOpenChange={setState}
     >
-      <SheetTrigger asChild>
+      <DrawerTrigger asChild>
         <button
           className={cn(navbarItemClassNames, className)}
           {...props}
         >
           Open Menu
         </button>
-      </SheetTrigger>
-      <SheetContent
-        side="left"
-        className="w-full !border-none !bg-opacity-90"
-      >
+      </DrawerTrigger>
+      <DrawerContent>
         <ul
           className={cn(
-            "h-full w-full",
+            "mx-auto w-full max-w-sm py-8",
             "flex flex-col items-center justify-center text-center",
             "text-xl [&_a]:block [&_a]:p-4",
           )}
@@ -59,7 +56,7 @@ export function MobileSheetButton({ className, ...props }: Props) {
             </li>
           ))}
         </ul>
-      </SheetContent>
-    </Sheet>
+      </DrawerContent>
+    </Drawer>
   );
 }

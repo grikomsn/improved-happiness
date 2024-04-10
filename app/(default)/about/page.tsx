@@ -1,9 +1,9 @@
 import { ContainerSection } from "@/components/container-section";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
 import { Polaroid } from "@/components/polaroid";
+import { ProseArticle } from "@/components/prose-article";
 import { getReader } from "@/server/keystatic";
 import { DocumentRenderer } from "@keystatic/core/renderer";
-import clsx from "clsx";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,25 +15,16 @@ export default async function Page() {
   const document = await data.content();
   const renderers = getBasicRenderers();
   return (
-    <ContainerSection
-      className="relative"
-      enableNavShadow
-    >
-      <div
-        className={clsx(
-          "mb-8 w-[300px] max-w-full rotate-3",
-          "md:float-right md:-mr-16 md:w-[300px]",
-          //
-        )}
-      >
+    <ContainerSection className="relative">
+      <div className="mb-8 ml-4 w-[300px] max-w-full rotate-3 max-md:mx-auto md:float-right">
         <Polaroid />
       </div>
-      <article className="prose prose-primary text-balance pb-20 dark:prose-invert [&_a:hover]:underline [&_a]:no-underline">
+      <ProseArticle>
         <DocumentRenderer
           document={document}
           renderers={renderers}
         />
-      </article>
+      </ProseArticle>
     </ContainerSection>
   );
 }
