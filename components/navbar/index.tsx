@@ -1,10 +1,7 @@
-import imageAvatar from "@/app/apple-icon.png";
-import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
-import Image from "next/image";
-import Link from "next/link";
 import { navbarContainerClassNames } from "./classnames";
 import { MobileDrawerButton } from "./mobile-drawer-button";
+import { NavHome } from "./nav-home";
 import { NavItem } from "./nav-item";
 import { routes } from "./routes";
 import { ThemeButton } from "./theme-button";
@@ -32,25 +29,11 @@ export function Navbar() {
         })}
       <nav
         className={cn(
-          "isolate flex items-center justify-center gap-x-2 py-4 text-sm",
+          "isolate flex items-center justify-center py-4 text-sm",
           "pointer-events-none [&>*]:pointer-events-auto",
         )}
       >
-        <Link
-          className={cn(
-            "group overflow-hidden max-sm:hidden",
-            "h-9 w-9 rounded-full border border-zinc-500/25 shadow-md",
-            "bg-zinc-500/25 transition hover:bg-primary-500/50",
-          )}
-          href="/"
-          role="group"
-        >
-          <Image
-            alt={defaultMetadata.title}
-            className="pointer-events-none"
-            src={imageAvatar}
-          />
-        </Link>
+        <NavHome />
         <ul className={navbarContainerClassNames}>
           {routes.slice(1).map((route, i) => (
             <li

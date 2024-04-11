@@ -2,7 +2,7 @@ import { cn } from "@/utils/ui";
 
 export const navbarContainerClassNames = cn(
   "flex items-center justify-center space-x-2 px-4 max-sm:px-2",
-  "bg-zinc-100/80 backdrop-blur-[2px] dark:bg-zinc-900/80",
+  "bg-zinc-100/80 backdrop-blur-sm dark:bg-zinc-900/80",
   "rounded-full border border-zinc-500/25 shadow-md",
 );
 

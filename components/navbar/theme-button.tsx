@@ -30,7 +30,10 @@ export function ThemeButton({ className, ...props }: Props) {
           <MoonIcon className="hidden h-4 w-4 dark:block" />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent sideOffset={8}>
+      <DropdownMenuContent
+        className="rounded-lg"
+        sideOffset={16}
+      >
         <DropdownMenuRadioGroup
           onValueChange={setTheme}
           value={theme}
