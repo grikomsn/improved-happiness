@@ -47,7 +47,10 @@ export function MobileDrawerButton({ className, ...props }: Props) {
             <li key={i}>
               <AdaptiveLink
                 {...route}
-                className={cn(pathname.startsWith(route.href) && "!text-primary-600 dark:!text-primary-500")}
+                className={cn(
+                  (route.exact ? pathname === route.href : pathname.startsWith(route.href)) &&
+                    "!text-primary-600 dark:!text-primary-500",
+                )}
                 onClick={close}
               />
             </li>
