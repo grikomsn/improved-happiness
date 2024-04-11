@@ -2,7 +2,6 @@ import { ContainerSection } from "@/components/container-section";
 import { getArticleRenderers } from "@/components/keystatic/article-renderers";
 import { ProseArticle } from "@/components/prose-article";
 import { getArticleLayoutSearchString } from "@/components/satori/types";
-import { TopScroller } from "@/components/top-scroller";
 import { getCustomPage, getCustomPages } from "@/server/keystatic";
 import { defaultMetadata } from "@/site.config";
 import { formatLongDate } from "@/utils/intl";
@@ -83,7 +82,6 @@ export default async function Page({ params }: Props) {
           renderers={renderers}
         />
       </ProseArticle>
-      <TopScroller />
     </ContainerSection>
   );
 }

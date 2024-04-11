@@ -3,7 +3,6 @@ import { getArticleRenderers } from "@/components/keystatic/article-renderers";
 import { ProseArticle } from "@/components/prose-article";
 import { getArticleLayoutSearchString } from "@/components/satori/types";
 import { Signature } from "@/components/signature";
-import { TopScroller } from "@/components/top-scroller";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { getArticle, getSortedArticles } from "@/server/keystatic";
 import { defaultMetadata } from "@/site.config";
@@ -131,7 +130,6 @@ export default async function Page({ params }: Props) {
           )}
         />
       </Link>
-      <TopScroller />
     </ContainerSection>
   );
 }
