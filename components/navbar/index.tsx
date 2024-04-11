@@ -11,7 +11,7 @@ import { ThemeButton } from "./theme-button";
 
 export function Navbar() {
   return (
-    <div className="pointer-events-none sticky inset-x-0 z-10 max-md:fixed max-md:bottom-0 md:top-0">
+    <div className="pointer-events-none fixed inset-x-0 z-10 max-md:fixed max-md:bottom-0 md:top-0">
       {Array(10)
         .fill(1)
         .map((v, i) => {
