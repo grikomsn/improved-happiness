@@ -11,39 +11,39 @@ export function ArticleLayout({ title, description, imgSrc = "", path = defaultM
   }
   return (
     <div
-      tw="flex h-full w-full p-16 text-zinc-50 bg-zinc-900"
       style={{ backgroundImage }}
+      tw="flex h-full w-full p-16 text-zinc-50 bg-zinc-900"
     >
       {imgSrc && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={imgSrc}
           alt={title}
-          tw="rounded-xl mr-16 h-full"
+          src={imgSrc}
           style={{ objectFit: "cover", width: 400 }}
+          tw="rounded-xl mr-16 h-full"
         />
       )}
       <div
-        tw="flex flex-col"
         style={imgSrc ? { width: 600 } : {}}
+        tw="flex flex-col"
       >
         <div
-          tw={clsx("mb-8 font-bold", title.length < 20 ? "text-7xl" : "text-5xl")}
           style={{ overflowWrap: "break-word" }}
+          tw={clsx("mb-8 font-bold", title.length < 20 ? "text-7xl" : "text-5xl")}
         >
           {title}
         </div>
         <div
-          tw="text-3xl"
           style={{ overflowWrap: "break-word" }}
+          tw="text-3xl"
         >
           {description}
         </div>
         <div tw="flex-grow" />
         {path && (
           <div
-            tw="opacity-70 text-xl"
             style={{ overflowWrap: "break-word" }}
+            tw="opacity-70 text-xl"
           >
             {path}
           </div>

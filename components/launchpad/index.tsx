@@ -29,19 +29,19 @@ export function Launchpad() {
 
   return (
     <CommandDialog
-      open={open}
-      onOpenChange={launchpad.set}
       _command={{
         loop: true,
       }}
+      onOpenChange={launchpad.set}
+      open={open}
     >
       <CommandInput placeholder="Type a command or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         {routeGroups.map(({ heading, items }) => (
           <CommandGroup
-            key={heading}
             heading={heading}
+            key={heading}
           >
             {items.map(({ Icon, children, href }) => {
               const key = slugify(children);

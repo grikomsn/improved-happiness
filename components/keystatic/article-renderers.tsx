@@ -17,9 +17,9 @@ export function getArticleRenderers(): DocumentRendererProps["renderers"] {
             )}
           >
             <Shiki
+              className="[&>pre]:p-4"
               code={code}
               language={language}
-              className="[&>pre]:p-4"
             />
             <ScrollBar orientation="horizontal" />
           </ScrollArea>

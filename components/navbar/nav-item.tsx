@@ -13,13 +13,13 @@ export function NavItem({ href = "#", className, ...props }: Props) {
   const isActive = pathname.startsWith(href);
   return (
     <AdaptiveLink
-      href={href}
       className={cn(
         navbarItemClassNames,
         isActive && "!text-primary-600 dark:!text-primary-500",
         className,
         //
       )}
+      href={href}
       {...props}
     />
   );

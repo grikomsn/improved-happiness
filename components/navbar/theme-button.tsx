@@ -22,8 +22,8 @@ export function ThemeButton({ className, ...props }: Props) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button
-          className={cn(navbarItemClassNames, className)}
           aria-label="Change theme"
+          className={cn(navbarItemClassNames, className)}
           {...props}
         >
           <SunIcon className="h-4 w-4 dark:hidden" />
@@ -32,14 +32,14 @@ export function ThemeButton({ className, ...props }: Props) {
       </DropdownMenuTrigger>
       <DropdownMenuContent sideOffset={8}>
         <DropdownMenuRadioGroup
-          value={theme}
           onValueChange={setTheme}
+          value={theme}
         >
           {themes.map((t) => (
             <DropdownMenuRadioItem
+              className="capitalize"
               key={t}
               value={t}
-              className="capitalize"
             >
               <DropdownMenuItemIndicator />
               {t}

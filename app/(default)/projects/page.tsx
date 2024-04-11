@@ -28,8 +28,8 @@ export default async function Page() {
               return (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={project.iconUrl}
                   alt={project.name}
+                  src={project.iconUrl}
                 />
               );
             if (project.link.value?.href.includes("github.com")) return <GithubIcon />;
@@ -37,7 +37,6 @@ export default async function Page() {
           }
           return (
             <li
-              key={i}
               className={cn(
                 "group relative text-sm",
                 "flex-col items-start sm:flex",
@@ -46,6 +45,7 @@ export default async function Page() {
                 "before:opacity-0 hover:before:opacity-100",
                 "before:-inset-1 hover:before:-inset-4",
               )}
+              key={i}
             >
               <div
                 className={cn(
@@ -64,12 +64,12 @@ export default async function Page() {
               <div className="mb-4 text-zinc-500">{project.subtitle}</div>
               {project.link.value && (
                 <AdaptiveLink
-                  href={project.link.value.href}
                   className={cn(
                     "flex items-center gap-x-2 hover:underline",
                     "text-primary-600 dark:text-primary-500",
                     "before:absolute before:-inset-4",
                   )}
+                  href={project.link.value.href}
                 >
                   <LinkIcon className="h-3 w-3" />
                   <span className="line-clamp-1">{project.link.value.label || trimHttp(project.link.value.href)}</span>

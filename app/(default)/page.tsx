@@ -32,18 +32,18 @@ export default async function Page() {
         {links.map(({ href, Icon, label }) => (
           <li key={label}>
             <SimpleTooltip
-              label={label}
               _content={{ side: "bottom" }}
               delayDuration={0}
+              label={label}
             >
               <AdaptiveLink
+                className="transition-colors hover:text-primary-600 dark:hover:text-primary-500"
                 href={href}
                 rel="me"
-                className="transition-colors hover:text-primary-600 dark:hover:text-primary-500"
               >
                 <Icon
-                  aria-label={label}
                   aria-hidden="true"
+                  aria-label={label}
                   className="h-5 w-5"
                 />
               </AdaptiveLink>

@@ -21,10 +21,10 @@ export function Polaroid({ className, ...props }: Props) {
     >
       <div className="bg-zinc-500">
         <Image
-          src={imageCover}
           alt="cover"
-          fill={false}
           className="aspect-square rounded object-contain object-center"
+          fill={false}
+          src={imageCover}
         />
       </div>
       <Signature

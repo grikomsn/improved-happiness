@@ -21,10 +21,10 @@ export default async function OpengraphImage({ params }: Props) {
   return new ImageResponse(
     (
       <ArticleLayout
-        title={article.title}
         description={article.description}
         imgSrc={article.cover || ""}
         path={`/articles/${params.slug}`}
+        title={article.title}
       />
     ),
     { ...size, fonts },

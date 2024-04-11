@@ -20,7 +20,6 @@ export default async function Page() {
       <ul className="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {wholeLinks.map(({ href, Icon, label }, i) => (
           <li
-            key={i}
             className={cn(
               "group relative text-sm",
               "flex-col items-start sm:flex",
@@ -29,9 +28,9 @@ export default async function Page() {
               "before:opacity-0 hover:before:opacity-100",
               "before:-inset-1 hover:before:-inset-4",
             )}
+            key={i}
           >
             <AdaptiveLink
-              href={href}
               className={cn(
                 "h-full w-full sm:px-4 sm:py-8",
                 "flex flex-row items-center justify-start gap-4 hover:underline",
@@ -39,12 +38,13 @@ export default async function Page() {
                 "group-hover:text-primary-600 group-hover:dark:text-primary-500",
                 "before:absolute before:-inset-4",
               )}
+              href={href}
               rel="me"
             >
               <Icon
-                className="h-6 w-6 sm:h-8 sm:w-8"
-                aria-label={label}
                 aria-hidden="true"
+                aria-label={label}
+                className="h-6 w-6 sm:h-8 sm:w-8"
               />
               <span className="flex-grow sm:flex-grow-0">{label}</span>
             </AdaptiveLink>

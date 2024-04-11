@@ -21,9 +21,9 @@ export default async function OpengraphImage({ params }: Props) {
   return new ImageResponse(
     (
       <ArticleLayout
-        title={page.title}
         description={page.description}
         path={`/${params.slug}`}
+        title={page.title}
       />
     ),
     { ...size, fonts },

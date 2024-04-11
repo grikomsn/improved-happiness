@@ -19,8 +19,8 @@ export function Navbar() {
           const maskDef = `linear-gradient(to top, rgba(0,0,0,0) ${i * 10}%, rgba(0,0,0,1) ${(v + i) * 10}%)`;
           return (
             <div
-              key={i}
               className="absolute inset-0 h-full w-full max-md:rotate-180"
+              key={i}
               style={{
                 backdropFilter: blurDef,
                 WebkitBackdropFilter: blurDef,
@@ -37,25 +37,25 @@ export function Navbar() {
         )}
       >
         <Link
-          href="/"
           className={cn(
             "group overflow-hidden max-sm:hidden",
             "h-9 w-9 rounded-full border border-zinc-500/25 shadow-md",
             "bg-zinc-500/25 transition hover:bg-primary-500/50",
           )}
+          href="/"
           role="group"
         >
           <Image
-            src={imageAvatar}
             alt={defaultMetadata.title}
             className="pointer-events-none"
+            src={imageAvatar}
           />
         </Link>
         <ul className={navbarContainerClassNames}>
           {routes.slice(1).map((route, i) => (
             <li
-              key={i}
               className="max-sm:hidden"
+              key={i}
             >
               <NavItem {...route} />
             </li>

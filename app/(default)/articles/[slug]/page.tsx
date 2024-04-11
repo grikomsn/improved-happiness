@@ -67,9 +67,9 @@ export default async function Page({ params }: Props) {
       {article.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={article.cover}
           alt="article cover image"
           className="mb-8 aspect-video w-full rounded bg-zinc-500 object-cover"
+          src={article.cover}
         />
       )}
       <div className="relative">
@@ -77,13 +77,13 @@ export default async function Page({ params }: Props) {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-              href="/articles"
               className={cn(
                 "absolute inset-y-1 -left-12 max-lg:hidden",
                 "h-8 w-8 rounded-full",
                 "flex items-center justify-center",
                 "hover:text-primary-600 dark:hover:text-primary-500",
               )}
+              href="/articles"
             >
               <ArrowLeftIcon className="h-4 w-4" />
             </Link>
@@ -99,8 +99,8 @@ export default async function Page({ params }: Props) {
       <p className="space-y-4 text-zinc-700 dark:text-zinc-300">{article.description}</p>
       <div className="!mb-16 flex items-center gap-x-1 text-sm text-zinc-700 dark:text-zinc-300">
         <CalendarIcon
-          className="h-3 w-3"
           aria-hidden="true"
+          className="h-3 w-3"
         />
         <span>Published at</span>
         <time dateTime={article.publishedAt}>{formatLongDate(article.publishedAt)}</time>
@@ -119,8 +119,8 @@ export default async function Page({ params }: Props) {
         />
       </ProseArticle>
       <Link
-        href="/"
         className="inline-block"
+        href="/"
       >
         <Signature
           className={cn(

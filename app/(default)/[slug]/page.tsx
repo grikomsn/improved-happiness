@@ -62,17 +62,17 @@ export default async function Page({ params }: Props) {
       {page.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={page.cover}
           alt="article cover image"
           className="mb-8 aspect-video w-full rounded bg-zinc-500 object-cover"
+          src={page.cover}
         />
       )}
       <h1 className="text-4xl font-bold">{page.title}</h1>
       <p className="space-y-4 text-zinc-700 dark:text-zinc-300">{page.description}</p>
       <div className="!mb-16 flex items-center gap-x-2 text-sm text-zinc-700 dark:text-zinc-300">
         <CalendarIcon
-          className="h-3 w-3"
           aria-hidden="true"
+          className="h-3 w-3"
         />
         {page.updatedAt && <time dateTime={page.updatedAt}>{formatLongDate(page.updatedAt)}</time>}
         <div className="flex-grow" />

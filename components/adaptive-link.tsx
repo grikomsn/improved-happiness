@@ -30,9 +30,9 @@ export function AdaptiveLink({ className, href, isExternal, rel = "", target, ..
 
   return (
     <Link
+      className={cn("data-[external=true]:cursor-ne-resize", className)}
       data-external={isActuallyExternal}
       href={href}
-      className={cn("data-[external=true]:cursor-ne-resize", className)}
       {...externalProps}
       {...props}
     />

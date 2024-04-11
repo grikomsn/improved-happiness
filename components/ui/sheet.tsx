@@ -59,8 +59,8 @@ const SheetContent = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Con
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Content
-        ref={ref}
         className={cn(sheetVariants({ side }), className)}
+        ref={ref}
         {...props}
       >
         {children}
@@ -95,8 +95,8 @@ const SheetTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
-    ref={ref}
     className={cn("text-lg font-semibold text-zinc-900 dark:text-zinc-50", className)}
+    ref={ref}
     {...props}
   />
 ));
@@ -107,8 +107,8 @@ const SheetDescription = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Description
-    ref={ref}
     className={cn("text-sm text-zinc-500 dark:text-zinc-400", className)}
+    ref={ref}
     {...props}
   />
 ));

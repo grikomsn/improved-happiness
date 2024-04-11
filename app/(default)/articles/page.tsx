@@ -25,7 +25,6 @@ export default async function Page() {
           if (entry.draft) return null;
           return (
             <li
-              key={slug}
               className={cn(
                 "group relative flex flex-col",
                 "before:absolute before:-z-10 before:transition-[opacity,inset]",
@@ -33,6 +32,7 @@ export default async function Page() {
                 "before:opacity-0 hover:before:opacity-100",
                 "before:-inset-1 hover:before:-inset-4",
               )}
+              key={slug}
             >
               <div className="mb-2 text-balance text-xl font-bold">{entry.title}</div>
               <div className="mb-2 text-balance text-sm text-zinc-700 dark:text-zinc-300">{entry.description}</div>
@@ -41,19 +41,19 @@ export default async function Page() {
                 <time dateTime={entry.publishedAt}>{formatLongDate(entry.publishedAt)}</time>
                 <div className="flex-grow" />
                 <AdaptiveLink
-                  href={entry.redirect.value?.url || `/articles/${slug}`}
                   className={cn(
                     "flex items-center gap-x-2 hover:underline",
                     "text-primary-600 dark:text-primary-500",
                     "before:absolute before:-inset-4",
                   )}
+                  href={entry.redirect.value?.url || `/articles/${slug}`}
                 >
                   <div>
                     {entry.redirect.value ? `Read on ${new URL(entry.redirect.value.url).hostname}` : "Read article"}
                   </div>
                   <Icon
-                    className="h-3 w-3"
                     aria-hidden="true"
+                    className="h-3 w-3"
                   />
                 </AdaptiveLink>
               </div>

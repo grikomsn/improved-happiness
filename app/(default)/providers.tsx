@@ -8,8 +8,8 @@ export default function Providers({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
-      disableTransitionOnChange
       defaultTheme="system"
+      disableTransitionOnChange
       enableSystem
     >
       <TooltipProvider>
