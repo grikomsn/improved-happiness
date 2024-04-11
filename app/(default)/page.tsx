@@ -1,3 +1,4 @@
+import imageIcon from "@/app/icon.png";
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
@@ -7,6 +8,8 @@ import { getHomeSingleton } from "@/server/keystatic";
 import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import { DocumentRenderer } from "@keystatic/core/renderer";
+import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page() {
   const query = await getHomeSingleton();
@@ -15,6 +18,19 @@ export default async function Page() {
 
   return (
     <ContainerSection className="relative flex flex-col items-start">
+      <Link
+        className={cn(
+          "mb-8 aspect-square h-32 w-32 max-w-full overflow-hidden",
+          "rounded-full border border-zinc-500/25 shadow-md",
+          "bg-zinc-500/25 transition hover:bg-primary-500/50",
+        )}
+        href="/about"
+      >
+        <Image
+          alt={defaultMetadata.title}
+          src={imageIcon}
+        />
+      </Link>
       <h1 className="mb-2 text-4xl font-bold">{defaultMetadata.title}</h1>
       <p className="mb-8 text-2xl">{defaultMetadata.description}</p>
       <div
