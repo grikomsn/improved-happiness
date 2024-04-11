@@ -14,16 +14,22 @@ export function Navbar() {
     <div className="pointer-events-none sticky inset-x-0 z-10 max-md:fixed max-md:bottom-0 md:top-0">
       {Array(10)
         .fill(1)
-        .map((v, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 max-md:rotate-180"
-            style={{
-              backdropFilter: `blur(${v + i}px)`,
-              maskImage: `linear-gradient(to top, rgba(0,0,0,0) ${i * 10}%, rgba(0,0,0,1) ${(v + i) * 10}%)`,
-            }}
-          />
-        ))}
+        .map((v, i) => {
+          const blurDef = `blur(${v + i}px)`;
+          const maskDef = `linear-gradient(to top, rgba(0,0,0,0) ${i * 10}%, rgba(0,0,0,1) ${(v + i) * 10}%)`;
+          return (
+            <div
+              key={i}
+              className="absolute inset-0 h-full w-full max-md:rotate-180"
+              style={{
+                backdropFilter: blurDef,
+                WebkitBackdropFilter: blurDef,
+                maskImage: maskDef,
+                WebkitMaskImage: maskDef,
+              }}
+            />
+          );
+        })}
       <nav
         className={cn(
           "isolate flex items-center justify-center gap-x-2 py-4 text-sm",
