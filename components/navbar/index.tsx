@@ -11,15 +11,15 @@ import { ThemeButton } from "./theme-button";
 
 export function Navbar() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 z-10 max-md:fixed max-md:bottom-0 md:top-0">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-10">
       {Array(10)
         .fill(1)
         .map((v, i) => {
           const blurDef = `blur(${v + i}px)`;
-          const maskDef = `linear-gradient(to top, rgba(0,0,0,0) ${i * 10}%, rgba(0,0,0,1) ${(v + i) * 10}%)`;
+          const maskDef = `linear-gradient(to bottom, rgba(0,0,0,0) ${i * 10}%, rgba(0,0,0,1) ${(v + i) * 10}%)`;
           return (
             <div
-              className="absolute inset-0 h-full w-full max-md:rotate-180"
+              className="absolute inset-0 h-full w-full"
               key={i}
               style={{
                 backdropFilter: blurDef,
