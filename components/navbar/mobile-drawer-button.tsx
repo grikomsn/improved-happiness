@@ -19,8 +19,13 @@ export function MobileDrawerButton({ className, ...props }: Props) {
 
   return (
     <Drawer
-      open={state}
+      dismissible
+      fixed
+      modal
       onOpenChange={setState}
+      open={state}
+      preventScrollRestoration
+      shouldScaleBackground={false}
     >
       <DrawerTrigger asChild>
         <button
@@ -38,14 +43,6 @@ export function MobileDrawerButton({ className, ...props }: Props) {
             "text-xl [&_a]:block [&_a]:p-4",
           )}
         >
-          <li>
-            <AdaptiveLink
-              href="/"
-              onClick={close}
-            >
-              Home
-            </AdaptiveLink>
-          </li>
           {routes.map((route, i) => (
             <li key={i}>
               <AdaptiveLink

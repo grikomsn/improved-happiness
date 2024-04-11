@@ -52,7 +52,7 @@ export function Navbar() {
           />
         </Link>
         <ul className={navbarContainerClassNames}>
-          {routes.map((route, i) => (
+          {routes.slice(1).map((route, i) => (
             <li
               key={i}
               className="max-sm:hidden"
