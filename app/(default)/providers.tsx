@@ -34,8 +34,8 @@ function RegisterCoordinates() {
       root.style.setProperty("--x", `${x.toFixed(2)}`);
       root.style.setProperty("--y", `${y.toFixed(2)}`);
 
-      root.style.setProperty("--beams-x", `${(-100 + x * 64).toFixed(0)}px`);
-      root.style.setProperty("--beams-y", `${(-520 + y * 64).toFixed(0)}px`);
+      root.style.setProperty("--beams-x", `${(-100 + x * 32).toFixed(0)}px`);
+      root.style.setProperty("--beams-y", `${(-520 + y * 32).toFixed(0)}px`);
     };
 
     document.addEventListener("mousemove", handleMouseMove);
