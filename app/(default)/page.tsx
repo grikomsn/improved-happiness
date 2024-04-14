@@ -49,7 +49,6 @@ export default async function Page() {
           <li key={label}>
             <SimpleTooltip
               _content={{ side: "bottom" }}
-              delayDuration={0}
               label={label}
             >
               <AdaptiveLink
