@@ -29,7 +29,7 @@ export function Navbar() {
         })}
       <nav
         className={cn(
-          "isolate flex items-center justify-center py-4 text-sm",
+          "isolate flex items-stretch justify-center py-4 text-sm",
           "pointer-events-none [&>*]:pointer-events-auto",
         )}
       >
@@ -46,7 +46,7 @@ export function Navbar() {
           <li className="sm:hidden">
             <MobileDrawerButton />
           </li>
-          <li className="h-4 w-px bg-zinc-500/50" />
+          <li className="my-2 w-px bg-zinc-500/50" />
           <ThemeButton />
         </ul>
       </nav>
