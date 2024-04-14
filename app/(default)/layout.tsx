@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <Navbar />
       <main
         className={cn(
-          "py-16",
+          "pb-32 max-md:pt-8 md:pt-16",
           "container relative isolate max-w-screen-md flex-grow",
           "before:pointer-events-none before:fixed before:inset-x-0 before:bottom-0 before:z-10 before:h-8 before:max-md:hidden",
           "before:bg-gradient-to-t",
