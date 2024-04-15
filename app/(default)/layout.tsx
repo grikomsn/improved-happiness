@@ -13,9 +13,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       <Navbar />
       <main
         className={cn(
-          "pb-32 max-md:pt-8 md:pt-16",
+          "pb-32 max-sm:pt-8 sm:pt-16",
           "container relative isolate max-w-screen-md flex-grow",
-          "before:pointer-events-none before:fixed before:inset-x-0 before:bottom-0 before:z-10 before:h-8 before:max-md:hidden",
+          "before:pointer-events-none before:fixed before:inset-x-0 before:bottom-0 before:z-10 before:h-8 before:max-sm:hidden",
           "before:bg-gradient-to-t",
           "before:from-zinc-100/90 before:from-50% dark:before:from-zinc-900/90",
           "before:to-transparent",

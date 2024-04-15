@@ -20,9 +20,9 @@ export default async function Page() {
     <ContainerSection className="relative flex flex-col items-start">
       <Link
         className={cn(
-          "mb-8 aspect-square h-32 w-32 max-w-full overflow-hidden",
+          "mb-8 aspect-square h-32 w-32 max-w-full overflow-hidden transition-colors",
           "rounded-full border border-zinc-500/25 shadow-md",
-          "bg-zinc-500/25 transition hover:bg-primary-500/50",
+          "hover:border-primary-600/50 dark:hover:border-primary-500/50",
         )}
         href="/about"
       >

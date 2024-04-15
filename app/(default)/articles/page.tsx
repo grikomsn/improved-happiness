@@ -28,7 +28,7 @@ export default async function Page() {
               className={cn(
                 "group relative flex flex-col",
                 "before:absolute before:-z-10 before:transition-[opacity,inset]",
-                "before:rounded-lg before:bg-zinc-500/5 dark:before:bg-zinc-500/10",
+                "before:rounded-lg before:bg-zinc-500/10 dark:before:bg-zinc-500/10",
                 "before:opacity-0 hover:before:opacity-100",
                 "before:-inset-1 hover:before:-inset-4",
               )}

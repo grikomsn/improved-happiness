@@ -16,7 +16,7 @@ export default async function Page() {
   const renderers = getBasicRenderers();
   return (
     <ContainerSection className="relative">
-      <div className="mb-8 ml-4 w-[300px] max-w-full rotate-3 max-md:mx-auto md:float-right">
+      <div className="mb-8 ml-4 w-[300px] max-w-full rotate-3 max-sm:mx-auto sm:float-right">
         <Polaroid />
       </div>
       <ProseArticle className="text-balance">

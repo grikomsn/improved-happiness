@@ -4,7 +4,7 @@ import { cn } from "@/utils/ui";
 import { usePathname } from "next/navigation";
 import { ComponentPropsWithoutRef } from "react";
 import { AdaptiveLink } from "../adaptive-link";
-import { navbarItemClassNames } from "./classnames";
+import { navbarRouteItem } from "./styles";
 
 type Props = ComponentPropsWithoutRef<"a">;
 
@@ -14,7 +14,7 @@ export function NavItem({ href = "#", className, ...props }: Props) {
   return (
     <AdaptiveLink
       className={cn(
-        navbarItemClassNames,
+        navbarRouteItem,
         isActive && "!text-primary-600 dark:!text-primary-500",
         className,
         //

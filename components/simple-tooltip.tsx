@@ -21,7 +21,7 @@ export function SimpleTooltip({ children, label, _trigger, _content, ...props }:
         {children}
       </TooltipTrigger>
       <TooltipContent
-        className="max-md:hidden"
+        className="max-sm:hidden"
         sideOffset={16}
         {..._content}
       >

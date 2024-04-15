@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { ComponentPropsWithoutRef, useEffect, useState } from "react";
 import { AdaptiveLink } from "../adaptive-link";
 import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
-import { navbarItemClassNames } from "./classnames";
 import { routes } from "./routes";
+import { navbarRouteItem } from "./styles";
 
 type Props = ComponentPropsWithoutRef<"button">;
 
@@ -29,7 +29,7 @@ export function MobileDrawerButton({ className, ...props }: Props) {
     >
       <DrawerTrigger asChild>
         <button
-          className={cn(navbarItemClassNames, className)}
+          className={cn(navbarRouteItem, className)}
           {...props}
         >
           Open Menu

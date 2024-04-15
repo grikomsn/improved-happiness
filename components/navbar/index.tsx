@@ -1,14 +1,13 @@
-import { cn } from "@/utils/ui";
-import { navbarContainerClassNames } from "./classnames";
 import { MobileDrawerButton } from "./mobile-drawer-button";
 import { NavHome } from "./nav-home";
 import { NavItem } from "./nav-item";
 import { routes } from "./routes";
+import * as styles from "./styles";
 import { ThemeButton } from "./theme-button";
 
 export function Navbar() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-10">
+    <div className={styles.navbarRoot}>
       {Array(10)
         .fill(1)
         .map((v, i) => {
@@ -16,7 +15,7 @@ export function Navbar() {
           const maskDef = `linear-gradient(to bottom, rgba(0,0,0,0) ${i * 10}%, rgba(0,0,0,1) ${(v + i) * 10}%)`;
           return (
             <div
-              className="absolute inset-0 h-full w-full"
+              className={styles.navbarBlurItem}
               key={i}
               style={{
                 backdropFilter: blurDef,
@@ -27,14 +26,9 @@ export function Navbar() {
             />
           );
         })}
-      <nav
-        className={cn(
-          "isolate flex items-stretch justify-center py-4 text-sm",
-          "pointer-events-none [&>*]:pointer-events-auto",
-        )}
-      >
+      <nav className={styles.navbarContainer}>
         <NavHome />
-        <ul className={navbarContainerClassNames}>
+        <ul className={styles.navbarRoutesContainer}>
           {routes.slice(1).map((route, i) => (
             <li
               className="max-sm:hidden"
@@ -46,8 +40,10 @@ export function Navbar() {
           <li className="sm:hidden">
             <MobileDrawerButton />
           </li>
-          <li className="my-2 w-px bg-zinc-500/50" />
-          <ThemeButton />
+          <div className="my-2 w-px rounded-full bg-zinc-500/25" />
+          <li>
+            <ThemeButton />
+          </li>
         </ul>
       </nav>
     </div>

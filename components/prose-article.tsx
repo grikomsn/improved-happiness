@@ -8,7 +8,7 @@ export function ProseArticle({ className, ...props }: Props) {
     <article
       className={cn(
         "prose prose-primary max-w-none dark:prose-invert",
-        "pb-20 [&>*]:gap-4",
+        "[&>*]:gap-4",
 
         "[&_a:hover]:underline [&_a]:no-underline",
         "prose-a:inline prose-a:hyphens-auto prose-a:break-words",
