@@ -112,7 +112,7 @@ importers:
         specifier: ^20.12.7
         version: 20.12.7
       '@types/react':
-        specifier: ^18.2.78
+        specifier: ^18.2.79
         version: 18.2.79
       eslint:
         specifier: ^8.57.0
@@ -130,7 +130,7 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
       prettier-plugin-tailwindcss:
-        specifier: ^0.5.13
+        specifier: ^0.5.14
         version: 0.5.14(@ianvs/prettier-plugin-sort-imports@4.2.1(prettier@3.2.5))(prettier@3.2.5)
       shadcn-ui:
         specifier: ^0.8.0
@@ -6308,7 +6308,7 @@ snapshots:
 
   '@urql/exchange-auth@2.1.6(graphql@16.8.1)':
     dependencies:
-      '@urql/core': 5.0.0(graphql@16.8.1)
+      '@urql/core': 4.3.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
@@ -6316,14 +6316,14 @@ snapshots:
   '@urql/exchange-graphcache@6.5.1(graphql@16.8.1)':
     dependencies:
       '@0no-co/graphql.web': 1.0.6(graphql@16.8.1)
-      '@urql/core': 5.0.0(graphql@16.8.1)
+      '@urql/core': 4.3.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
 
   '@urql/exchange-persisted@4.2.0(graphql@16.8.1)':
     dependencies:
-      '@urql/core': 5.0.0(graphql@16.8.1)
+      '@urql/core': 4.3.0(graphql@16.8.1)
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
