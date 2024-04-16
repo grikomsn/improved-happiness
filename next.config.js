@@ -14,25 +14,18 @@ const nextConfig = {
     APP_URL,
   },
   reactStrictMode: true,
-  redirects: async () => {
-    /** @type {import("next/dist/lib/load-custom-routes").Redirect[]} */
-    const arr = [
-      { source: "/contact", destination: "/", permanent: false },
-      { source: "/social.png", destination: "/api/opengraph/article", permanent: false },
-      //
-    ];
-
-    if (process.env.NEXT_PUBLIC_REDIRECT_HOST) {
-      arr.push({
-        source: "/",
-        has: [{ type: "host", value: process.env.NEXT_PUBLIC_REDIRECT_HOST }],
-        destination: APP_URL,
-        permanent: false,
-      });
-    }
-
-    return arr;
-  },
+  redirects: async () => [
+    {
+      source: "/contact",
+      destination: "/",
+      permanent: false,
+    },
+    {
+      source: "/social.png",
+      destination: "/api/opengraph/article",
+      permanent: false,
+    },
+  ],
   rewrites: async () => [
     {
       source: "/.well-known/security.txt",
