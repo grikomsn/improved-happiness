@@ -2,6 +2,7 @@ import imageIcon from "@/app/icon.png";
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
+import { navbarHomeItem } from "@/components/navbar/styles";
 import { SimpleTooltip } from "@/components/simple-tooltip";
 import { links } from "@/constants/links";
 import { getHomeSingleton } from "@/server/keystatic";
@@ -19,11 +20,7 @@ export default async function Page() {
   return (
     <ContainerSection className="relative flex flex-col items-start">
       <Link
-        className={cn(
-          "mb-8 aspect-square h-32 w-32 max-w-full overflow-hidden transition-colors",
-          "rounded-full border border-zinc-500/25 shadow-md",
-          "hover:border-primary-600/50 dark:hover:border-primary-500/50",
-        )}
+        className={cn(navbarHomeItem, "mb-8 h-32 w-32")}
         href="/about"
       >
         <Image

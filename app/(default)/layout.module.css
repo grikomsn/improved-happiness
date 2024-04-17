@@ -1,13 +1,12 @@
 .beams {
   background-image: url(/beams.png);
-  background-position: left 100% top -50vh;
+  background-position: left 50% top -520px;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: auto auto;
   height: 100%;
   left: 0;
   position: fixed;
   top: 0;
-  transition: background-position 1s ease-out;
   width: 100%;
   z-index: -1;
 }

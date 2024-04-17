@@ -6,9 +6,7 @@ import { cn } from "@/utils/ui";
 import Image from "next/image";
 import { ComponentProps } from "react";
 
-type Props = ComponentProps<"div">;
-
-export function Polaroid({ className, ...props }: Props) {
+export function Polaroid({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(

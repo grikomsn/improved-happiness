@@ -18,12 +18,11 @@ const tailwindConfig = {
       },
     },
     extend: {
-      animation: {
-        "accordion-down": "accordion-down var(--duration,0.2s) ease-out",
-        "accordion-up": "accordion-up var(--duration,0.2s) ease-out",
-      },
       colors: {
         primary: colors.amber,
+      },
+      transitionTimingFunction: {
+        "out-quint": "cubic-bezier(0.23, 1, 0.32, 1)",
       },
       fontFamily: {
         mono: ["var(--font-geist-mono)", "Geist Mono Variable", "Geist Mono", ...defaultTheme.fontFamily.mono],
