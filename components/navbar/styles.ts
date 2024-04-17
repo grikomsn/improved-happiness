@@ -1,7 +1,7 @@
 import { cn } from "@/utils/ui";
 
 export const navbarHomeContainer = cn(
-  "ease-out-quint h-9 transition-all duration-500 max-sm:hidden",
+  "h-9 transition-all duration-500 ease-out-quint max-sm:hidden",
   "mr-0 w-0 opacity-0 blur-md",
   "data-[visible=true]:mr-2 data-[visible=true]:w-9 data-[visible=true]:opacity-100 data-[visible=true]:blur-none",
 );
@@ -37,7 +37,7 @@ export const navbarRouteItem = cn(
   "before:absolute before:inset-x-0 before:h-px before:rounded-t-full",
   "before:-bottom-px hover:before:bottom-0",
   "before:opacity-0 hover:before:opacity-100",
-  "before:ease-out-quint before:transition-all before:duration-200",
+  "before:transition-all before:duration-200 before:ease-out-quint",
 
   "hover:before:bg-primary-600 dark:hover:before:bg-primary-500",
   "before:shadow-[0_1px_4px] before:shadow-primary-600 dark:before:shadow-primary-500",
