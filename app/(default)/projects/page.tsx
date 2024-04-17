@@ -1,9 +1,10 @@
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
+import { GitHubIcon } from "@/components/icons/github";
 import { getProjects } from "@/server/keystatic";
 import { trimHttp } from "@/utils/string";
 import { cn } from "@/utils/ui";
-import { BracesIcon, GithubIcon, LinkIcon } from "lucide-react";
+import { BracesIcon, LinkIcon } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default async function Page() {
                   src={project.iconUrl}
                 />
               );
-            if (project.link.value?.href.includes("github.com")) return <GithubIcon />;
+            if (project.link.value?.href.includes("github.com")) return <GitHubIcon />;
             return <BracesIcon />;
           }
           return (
@@ -49,7 +50,7 @@ export default async function Page() {
             >
               <div
                 className={cn(
-                  "mb-2 rounded-full border border-zinc-500/25 bg-zinc-500/5",
+                  "mb-2 rounded-full border border-zinc-500/25 bg-zinc-500/5 max-sm:ml-2",
                   "[&>*]:m-1 [&>*]:h-8 [&>*]:w-8 [&>*]:rounded-full [&>*]:object-cover",
                   "[&>svg]:p-1",
                   "float-right sm:float-none",
@@ -58,7 +59,7 @@ export default async function Page() {
                 <ProjectIcon />
               </div>
               <div className="mb-2 text-lg font-bold">{project.name}</div>
-              <div className="mb-4 line-clamp-2 h-auto text-balance text-zinc-700 dark:text-zinc-300 sm:h-16">
+              <div className="mb-2 line-clamp-2 h-auto text-balance text-zinc-700 dark:text-zinc-300 sm:h-16">
                 {project.description}
               </div>
               <div className="mb-4 text-zinc-500">{project.subtitle}</div>
