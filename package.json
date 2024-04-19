@@ -1,6 +1,6 @@
 {
   "name": "@grikomsn/improved-happiness",
-  "packageManager": "pnpm@9.0.0+sha256.bdfc9a7b372b5c462176993e586492603e20da5864d2f8881edc2462482c76fa",
+  "packageManager": "pnpm@9.0.3+sha256.f5becd4b77fe9150c8d89423612eb413945114bf6dd00fdcb5940434b84731c4",
   "scripts": {
     "build": "next build",
     "dev": "PORT=6796 next dev",
