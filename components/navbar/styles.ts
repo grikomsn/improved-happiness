@@ -15,7 +15,7 @@ export const navbarHomeItem = cn(
 
 export const navbarRoot = cn(
   "fixed inset-x-0 z-10",
-  "max-sm:bottom-0 sm:top-0",
+  "bottom-0",
   //
 );
 
@@ -46,6 +46,6 @@ export const navbarRouteItem = cn(
 );
 
 export const navbarBlurItem = cn(
-  "absolute inset-0 h-full w-full sm:rotate-180",
+  "absolute inset-0 h-full w-full",
   //
 );
