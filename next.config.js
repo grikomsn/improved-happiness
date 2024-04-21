@@ -60,6 +60,8 @@ const nextConfig = {
   ],
   rewrites: async () => [
     { source: "/.well-known/security.txt", destination: "/security.txt" },
+    { source: "/resume", destination: "https://resume.nibras.co" },
+    { source: "/resume.pdf", destination: "https://resume.nibras.co/resume.pdf" },
     { source: "/social.png", destination: "/api/opengraph/article" },
   ],
   swcMinify: true,
