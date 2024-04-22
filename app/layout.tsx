@@ -4,7 +4,6 @@ import "@fontsource-variable/figtree/index.css";
 import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistMono } from "geist/font/mono";
 import { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
@@ -61,7 +60,6 @@ export default function Layout({ children }: { children: ReactNode }) {
       >
         {children}
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
