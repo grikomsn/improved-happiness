@@ -50,6 +50,7 @@ const nextConfig = {
     { source: "/about-me", destination: "/about", permanent: true },
     { source: "/contact-me", destination: "/", permanent: false },
     { source: "/contact", destination: "/", permanent: false },
+    { source: "/resume", destination: "https://resume.nibras.co", permanent: false },
     { source: "/socials", destination: "/links", permanent: true },
     { source: "/talk", destination: "/", permanent: true },
     { source: "/talks", destination: "/", permanent: true },
@@ -60,8 +61,6 @@ const nextConfig = {
   ],
   rewrites: async () => [
     { source: "/.well-known/security.txt", destination: "/security.txt" },
-    { source: "/resume/:path*", destination: "https://resume.nibras.co/:path*" },
-    { source: "/resume.pdf", destination: "https://resume.nibras.co/resume.pdf" },
     { source: "/social.png", destination: "/api/opengraph/article" },
   ],
   swcMinify: true,
