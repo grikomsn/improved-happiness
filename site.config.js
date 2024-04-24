@@ -15,7 +15,7 @@ const url = `${protocol}://${domain}`;
 /* #__PURE__ */
 const defaultMetadata = {
   title: "Griko Nibras",
-  description: "Software engineer specialized in frontend development",
+  description: "Creating delightful web experiences using frontend technologies",
   email: "griko@nibras.co",
   domain,
   url,
