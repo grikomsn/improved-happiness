@@ -5,6 +5,7 @@ import imageCover from "@/public/assets/about/cover.jpg";
 import { cn } from "@/utils/ui";
 import Image from "next/image";
 import { ComponentProps } from "react";
+import { create } from "zustand";
 
 export function Polaroid({ className, ...props }: ComponentProps<"div">) {
   return (
@@ -20,8 +21,15 @@ export function Polaroid({ className, ...props }: ComponentProps<"div">) {
       <div className="bg-zinc-500">
         <Image
           alt="cover"
-          className="aspect-square rounded object-contain object-center"
+          className={cn(
+            "rounded object-contain object-center",
+            "aspect-square opacity-0 blur-sm",
+            "data-[loaded=true]:scale-100 data-[loaded=true]:opacity-100 data-[loaded=true]:blur-none",
+            "transition-all duration-1000 ease-out-quint",
+          )}
+          data-loaded={useStore()}
           fill={false}
+          onLoad={() => useStore.setState(true)}
           src={imageCover}
         />
       </div>
@@ -35,3 +43,5 @@ export function Polaroid({ className, ...props }: ComponentProps<"div">) {
     </div>
   );
 }
+
+const useStore = create(() => false);

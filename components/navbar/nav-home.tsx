@@ -1,10 +1,8 @@
 "use client";
 
-import imageAvatar from "@/app/icon.jpg";
-import { defaultMetadata } from "@/site.config";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AvatarImage } from "../avatar-image";
 import * as styles from "./styles";
 
 export function NavHome() {
@@ -19,11 +17,7 @@ export function NavHome() {
         className={styles.navbarHomeItem}
         href="/"
       >
-        <Image
-          alt={defaultMetadata.title}
-          className="pointer-events-none"
-          src={imageAvatar}
-        />
+        <AvatarImage className="pointer-events-none" />
       </Link>
     </div>
   );

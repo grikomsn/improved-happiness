@@ -1,5 +1,5 @@
-import imageIcon from "@/app/icon.jpg";
 import { AdaptiveLink } from "@/components/adaptive-link";
+import { AvatarImage } from "@/components/avatar-image";
 import { ContainerSection } from "@/components/container-section";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
 import { navbarHomeItem } from "@/components/navbar/styles";
@@ -9,7 +9,6 @@ import { getHomeSingleton } from "@/server/keystatic";
 import { defaultMetadata } from "@/site.config";
 import { cn } from "@/utils/ui";
 import { DocumentRenderer } from "@keystatic/core/renderer";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Page() {
@@ -23,10 +22,7 @@ export default async function Page() {
         className={cn(navbarHomeItem, "mb-8 h-32 w-32")}
         href="/about"
       >
-        <Image
-          alt={defaultMetadata.title}
-          src={imageIcon}
-        />
+        <AvatarImage />
       </Link>
       <h1 className="mb-2 text-4xl font-bold">{defaultMetadata.title}</h1>
       <p className="mb-8 text-2xl">{defaultMetadata.description}</p>
