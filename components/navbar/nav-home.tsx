@@ -1,6 +1,6 @@
 "use client";
 
-import imageAvatar from "@/app/icon.png";
+import imageAvatar from "@/app/icon.jpg";
 import { defaultMetadata } from "@/site.config";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import imageIcon from "@/app/icon.png";
+import imageIcon from "@/app/icon.jpg";
 import { AdaptiveLink } from "@/components/adaptive-link";
 import { ContainerSection } from "@/components/container-section";
 import { getBasicRenderers } from "@/components/keystatic/basic-renderers";
