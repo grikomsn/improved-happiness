@@ -9,7 +9,7 @@ export const navbarHomeContainer = cn(
 export const navbarHomeItem = cn(
   "relative block h-9 w-9 overflow-hidden transition-colors",
   "shadow-md backdrop-blur-sm",
-  "rounded-full border border-zinc-500/25",
+  "rounded-full border border-zinc-500",
   "hover:border-primary-600 dark:hover:border-primary-500",
 );
 
