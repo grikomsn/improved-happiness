@@ -31,6 +31,9 @@ const nextConfig = {
   env: {
     APP_URL,
   },
+  experimental: {
+    reactCompiler: true,
+  },
   headers: async () => [
     {
       source: "/(.*)",
@@ -63,7 +66,6 @@ const nextConfig = {
     { source: "/.well-known/security.txt", destination: "/security.txt" },
     { source: "/social.png", destination: "/api/opengraph/article" },
   ],
-  swcMinify: true,
   trailingSlash: false,
   transpilePackages: [],
   webpack: (config, {}) => {
